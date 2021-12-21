@@ -3,10 +3,10 @@ import { useState, useEffect } from 'react'
 import Box from '@mui/material/Box'
 import Slider from '@mui/material/Slider'
 import './style.css'
-import {v4 as uuid} from 'uuid'
 
-// Importing algorithm
-import bubbleSort from '../../utils/sorting/bubbleSort'
+// Importing algorithm Bubble Sort and the animation
+import bubbleSort from '../../utils/sorting/bubbleSort/bubbleSort'
+import animationBubble from '../../utils/sorting/bubbleSort/animationsBubble'
 
 function RenderArray() {
   const [heightArrays, setHeightArrays] = useState([])
@@ -14,10 +14,12 @@ function RenderArray() {
 
   // generating one array as the page render
   useEffect(() => {
+    let array = [] 
     for (let i = 0; i < sizeArray; i++) {
       let number = Math.floor(Math.random() * 300)
-      setHeightArrays((oldValue) => [...oldValue, { number, id: uuid() }])
+      array.push(number)
     }
+    setHeightArrays(array)
   }, [sizeArray])
 
   // handling values changes on the slider
@@ -30,14 +32,15 @@ function RenderArray() {
     setHeightArrays('')
   }
 
+  // handling the bubble sort algorithm
   function handleBubbleSort() {
-    const bubbleSortArray = bubbleSort(heightArrays)
-    setHeightArrays(e => [...e, bubbleSortArray])
-    console.log(heightArrays)
+    const animations = bubbleSort(heightArrays)
+    animationBubble(animations)
   }
 
     return (
         <>
+        {/* Generating the option to choose the size of the array */}
           <button onClick={handleBubbleSort}>BubbleSort</button>
           <Box width={100}>
             <Slider
@@ -50,11 +53,11 @@ function RenderArray() {
             />
           </Box>
           <div className='container'>
-            {heightArrays.length &&
-              heightArrays.map(({ number, id }) => {
+            {/* generating the bars */}
+            {heightArrays.length && heightArrays.map((number, index ) => {
                 return (
                   <div
-                    key={id}
+                    key={index}
                     style={{ height: `${number}px` }}
                     className='array_bar'
                   ></div>
