@@ -6,7 +6,7 @@ export default function animationMerge(animations){
           const [barOneIdx, barTwoIdx] = animations[i];
           const barOneStyle = arrayBars[barOneIdx].style;
           const barTwoStyle = arrayBars[barTwoIdx].style;
-          const color = i % 3 === 0 ? "red" : "blue";
+          const color = i % 3 === 0 ? "#0ff" : "rgb(168, 58, 135)";
           setTimeout(() => {
             barOneStyle.backgroundColor = color;
             barTwoStyle.backgroundColor = color;
