@@ -7,7 +7,7 @@ export default function bubbleSort(array) {
   // Bubble Sort Algo
   while (!sorted) {
     sorted = true
-    for (let i = 0; i < heightArrays.length-1; i++) {
+    for (let i = 0; i < heightArrays.length - 1; i++) {
       
       animationArray.push([i,i+1,true]);
       animationArray.push([i,i+1,true])
@@ -17,10 +17,11 @@ export default function bubbleSort(array) {
         animationArray.push([i,heightArrays[i+1],false]);
         animationArray.push([i+1,heightArrays[i],false]);
 
+        // Changing positions
         const actual = heightArrays[i]
         heightArrays[i] = heightArrays[i + 1]
         heightArrays[i + 1] = actual
-        // await sleep(1)
+
         sorted = false
       }
     }

@@ -5,8 +5,14 @@ import Slider from '@mui/material/Slider'
 import './style.css'
 
 // Importing algorithm Bubble Sort and the animation
-import bubbleSort from '../../utils/sorting/bubbleSort/bubbleSort'
-import animationBubble from '../../utils/sorting/bubbleSort/animationsBubble'
+import bubbleSort from '../../utils/sorting/bubbleSort/bubbleSort.jsx'
+import animationBubble from '../../utils/sorting/bubbleSort/animationsBubble.jsx'
+
+// Importing algorithm Merge Sort and the animation
+import mergeSort from '../../utils/sorting/mergeSort/mergeSort.jsx'
+import animationMerge from '../../utils/sorting/mergeSort/animationsMerge.jsx'
+// Importing the NavBar
+import RenderNavBarSort from '../NavSort/index.jsx'
 
 function RenderArray() {
   const [heightArrays, setHeightArrays] = useState([])
@@ -34,14 +40,28 @@ function RenderArray() {
 
   // handling the bubble sort algorithm
   function handleBubbleSort() {
-    const animations = bubbleSort(heightArrays)
-    animationBubble(animations)
+    const animationsBubble = bubbleSort(heightArrays)
+    animationBubble(animationsBubble)
   }
+
+  function handleMergeSort() {
+    const animations = mergeSort(heightArrays)
+    animationMerge(animations)
+  }
+
+  // function handleSelectionSort() {
+  //   const animations = selectionSort(heightArrays)
+  //   animationSelection(animations)
+  // }
 
     return (
         <>
-        {/* Generating the option to choose the size of the array */}
-          <button onClick={handleBubbleSort}>BubbleSort</button>
+          <RenderNavBarSort 
+            handleBubbleSort = {handleBubbleSort} 
+            handleMergeSort = {handleMergeSort}
+          />
+
+          {/* Generating the option to choose the size of the array */}  
           <Box width={100}>
             <Slider
               min={10}
@@ -52,6 +72,7 @@ function RenderArray() {
               onChange={handleChange}
             />
           </Box>
+
           <div className='container'>
             {/* generating the bars */}
             {heightArrays.length && heightArrays.map((number, index ) => {
@@ -65,7 +86,7 @@ function RenderArray() {
               })}
           </div>
         </>
-      )
+    )
 }
 
 export default RenderArray;
