@@ -11,6 +11,10 @@ import animationBubble from '../../utils/sorting/bubbleSort/animationsBubble.jsx
 // Importing algorithm Merge Sort and the animation
 import mergeSort from '../../utils/sorting/mergeSort/mergeSort.jsx'
 import animationMerge from '../../utils/sorting/mergeSort/animationsMerge.jsx'
+
+// IMporting algorithm Insertion Sort and the animation
+import insertionSort from '../../utils/sorting/insertionSort/selectionSort.jsx'
+
 // Importing the NavBar
 import RenderNavBarSort from '../NavSort/index.jsx'
 
@@ -40,25 +44,26 @@ function RenderArray() {
 
   // handling the bubble sort algorithm
   function handleBubbleSort() {
-    const animationsBubble = bubbleSort(heightArrays)
-    animationBubble(animationsBubble)
+    const animationsBubble = bubbleSort(heightArrays);
+    animationBubble(animationsBubble);
   }
 
   function handleMergeSort() {
-    const animations = mergeSort(heightArrays)
-    animationMerge(animations)
+    const animations = mergeSort(heightArrays);
+    animationMerge(animations);
   }
 
-  // function handleSelectionSort() {
-  //   const animations = selectionSort(heightArrays)
-  //   animationSelection(animations)
-  // }
+  function handleInsertionSort() {
+    const animations = insertionSort(heightArrays);
+    setHeightArrays((oldState) => [...oldState, animations])
+  }
 
     return (
         <>
           <RenderNavBarSort 
             handleBubbleSort = {handleBubbleSort} 
             handleMergeSort = {handleMergeSort}
+            handleInsertionSort = {handleInsertionSort}
           />
 
           {/* Generating the option to choose the size of the array */}  
