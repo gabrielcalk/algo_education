@@ -7,7 +7,6 @@ export const StyleNav = styled.nav`
         flex-direction: row;
         justify-content: flex-end;
         padding: 5px;
-        background-color: var(--third_color);
 
     /* Adding some color, margin, padding and background animation on the anchors that are inside to the nav tag */
     button {
@@ -48,4 +47,15 @@ export const StyleNav = styled.nav`
         transform: scaleY(1);
         transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
     }
+`
+
+export const Logo = styled.img`
+    margin-left: 8px;
+    width: 60px;
+    height: 60px;
+    float: left;
+`
+
+export const Header = styled.header`
+    background-color: var(--third_color);
 `

@@ -1,4 +1,4 @@
-export default function animationBubble(animations){
+export default function animationBubble(animations, speed){
     // doing one foor loop on the animation array (coming from ArraySort)
     for(let i = 0; i < animations.length; i++){
         const arrayBars = document.getElementsByClassName('array_bar');
@@ -15,14 +15,14 @@ export default function animationBubble(animations){
              setTimeout(()=>{
               arrayBars[barOneIdx].style.backgroundColor=color;
               arrayBars[barTwoIdx].style.backgroundColor=color;
-             }, i * 2);
+             }, i * speed);
          }else{
            setTimeout(()=>{
             //  Changing the positions of the bars
              const [barOneIdx , newHeight] = animations[i];
              const barOneStyle = arrayBars[barOneIdx].style;
              barOneStyle.height = `${newHeight}px`;
-           }, i * 2);
+           }, i * speed);
          }
     }
 }

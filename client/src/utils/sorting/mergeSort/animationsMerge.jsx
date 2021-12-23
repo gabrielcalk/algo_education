@@ -1,4 +1,4 @@
-export default function animationMerge(animations){
+export default async function animationMerge(animations, speed){
     for (let i = 0; i < animations.length; i++) {
         const arrayBars = document.getElementsByClassName('array_bar');
         const isColorChange = i % 3 !== 2;
@@ -10,13 +10,13 @@ export default function animationMerge(animations){
           setTimeout(() => {
             barOneStyle.backgroundColor = color;
             barTwoStyle.backgroundColor = color;
-          }, i * 1);
+          }, i * speed);
         } else {
           setTimeout(() => {
             const [barOneIdx, newHeight] = animations[i];
             const barOneStyle = arrayBars[barOneIdx].style;
             barOneStyle.height = `${newHeight}px`;
-          }, i * 1);
+          }, i * speed);
         }
     }
 }
