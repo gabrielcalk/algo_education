@@ -3,7 +3,7 @@ function RenderSortingInsertionInfo() {
         <div>
             <h3>Insertion</h3>
         </div>
-    );
+    )
 }
 
 export default RenderSortingInsertionInfo;

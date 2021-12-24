@@ -40,4 +40,9 @@ export const GlobalStyle = createGlobalStyle`
     button {
         cursor: pointer;
     }
+
+    svg{
+        width: 50px;
+        height: 50px;
+    }
 `

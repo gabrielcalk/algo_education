@@ -23,7 +23,7 @@ function RenderAlgoInfoPage() {
 
     return (
         <div>
-            <DisplayButtonsInfo/>
+            <DisplayButtonsInfo setShowInfo={setShowInfo}/>
             {renderInfo()}
         </div>
     );

@@ -3,7 +3,7 @@ function DisplayButtonsInfo({setShowInfo}) {
         <div>
             <button onClick={() => {setShowInfo("bubble")}}>BubbleSort</button>
             <button onClick={() => {setShowInfo("merge")}}>MergeSort</button>
-            <button onClick={() => {setShowInfo("insertion")}}>SelectionSort</button>
+            <button onClick={() => {setShowInfo("insertion")}}>InsertionSort</button>
         </div>
     );
 }
