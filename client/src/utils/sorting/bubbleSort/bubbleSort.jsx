@@ -8,7 +8,6 @@ export default function bubbleSort(array) {
   while (!sorted) {
     sorted = true
     for (let i = 0; i < heightArrays.length - 1; i++) {
-      
       animationArray.push([i,i+1,true]);
       animationArray.push([i,i+1,true])
 

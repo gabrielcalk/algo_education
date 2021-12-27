@@ -12,7 +12,8 @@ import mergeSort from '../../utils/sorting/mergeSort/mergeSort.jsx';
 import animationMerge from '../../utils/sorting/mergeSort/animationsMerge.jsx';
 
 // IMporting algorithm Insertion Sort and the animation
-import insertionSort from '../../utils/sorting/insertionSort/selectionSort.jsx';
+import insertionSort from '../../utils/sorting/selectionSort/selectionSort.jsx';
+import animationSelection from '../../utils/sorting/selectionSort/animationsSelection'
 
 // Importing NavBar and Main
 import RenderNavBarSort from '../NavSort/index.jsx';
@@ -38,7 +39,7 @@ function RenderSortPage(props) {
     // handling the Insertion sort algorithm
     function handleInsertionSort() {
         const animations = insertionSort(heightArrays);
-        setHeightArrays((oldState) => [...oldState, animations]);
+        animationSelection(animations, speed)
     }
 
     return (
