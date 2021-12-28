@@ -2,6 +2,8 @@ import {useState} from 'react'
 
 import {ReactComponent as BrazilFlag} from '../../images/brazil_flag.svg'
 import {ReactComponent as USAFlag} from '../../images/usa_flag.svg'
+import mergeSortBreak from '../../images/mergeSortBreak.png'
+import mergeSortMerging from '../../images/mergeSortMerging.png'
 import {Text, DivFlag, InfoEachAlgo, NameAlgo} from './style.js'
 
 function RenderSortingMergeInfo() {
@@ -74,100 +76,66 @@ function RenderSortingMergeInfo() {
                         {(changeLanguage === "portuguese")
                             ? <article>
                                     <div>
-                                        <h2><p>O Bubble Sort é considerado um algoritmo de ordenação (sort) básico e intuito.</p></h2>
+                                        <h2><p>O algoritmo Merge Sort é um dos mais eficientes para ordenar uma lista, inclusive utilizado por muitas linguages.</p></h2>
 
-                                        <p>Apesar de ser o primeiro algoritmo de ordem que aprendemos ele definitivamente não é um dos mais eficientes.</p>
-
-                                        <p>Essa ineficiência occore pelo fato do Bubble Sort levar mais tempo para executar (alta complexidade de tempo) a sua função do que muitos outros algoritmos de ordenação.</p>
+                                        <p>Na minha opinião, ele deve ser um dos últimos (juntamente com o Quick Sort) a ser estudado, pois o seu conceito é menos intuitivo que os demais.</p>
                                     </div>
 
-                                <p>Vamos para um exemplo:</p>
+                                <p>Apesar de ser um algoritmo sofisticado, o Merge Sort é "incapaz" de ordernar uma lista inicial com mais de um elemento.</p>
 
-                                <code>[9, 6, 3, 5, 1]</code>
-
-                                <p>Qual a melhor forma de ordenar os valores acima?</p>
-
-                                <p>De acordo com o Bubble Sort é comparar todos os valores disponíveis, colocar o maior valor de N números na última posição e repetir o processo até ter uma lista organizada.</p>
-
-                                <p>Vamos ordenar de acordo com o Bubble Sort!</p>
+                                <p>Isso significa que ele quebrará uma lista de números inteiros em pequenas listas com apenas um número, e depois juntará os elementos novamente já na ordem desejada.</p>
                                 
-                                <h3>1) A primeira comparação será do número 9 com o número 6.</h3>
+                                <p>Vamos pegar a seguinte lista de número inteiros:</p>
+                                
+                                <code>[5, 2, 6, 2, 1, 4, 8, 7]</code>
 
-                                <p>Pelo fato de 9 ser maior que 6 iríamos comparar o 9 (maior número) com o próximo número, que no caso seria o 3.</p>
+                                <p>O Merge Sort quebrará toda a estrutura acima até sobrar apenas 8 elementos distintosç vamos para um exemplo ilustrativo:</p>
+                                
+                                <section>
+                                    <img src={mergeSortBreak} alt="breaking the array"/>
+                                </section>
+                                
+                                <div>
+                                    <h3>Com os elementos separados, podemos fazer o processo inverso para ir construindo a nossa lista ordenada a partir de listas menores já ordenadas.</h3>
+                                </div>
 
-                                    <div>
-                                        <h3>2) A segunda comparação seria feita entre o 9 e 3.</h3>
+                                <section>
+                                    <img src={mergeSortMerging} alt="merging the array"/>
+                                </section>
 
-                                        <p>9 claramente é maior do que 3, então continuaremos com o 9 (lembre-se que o nosso objetivo é encontrar o maior valor e adicioná-lo no final).</p>
-                                        
-                                        <h3>3) Terceira comparação: 9 e 5.</h3>
-
-                                        <p>9 {'>'} 5 = verdadeiro</p>
-                                        
-                                        <p>Podemos seguir com o número 9.</p>
-
-                                    </div>
-                                <h3>4) A Quarta e última comparação seria feita entre o 9 e 1.</h3>
-
-                                <p>Como 9 é maior do que 1, então o número 9 assumiria a posição do 1 (no final da lista); isso acontece pois toda a lista já foi percorrida.</p>
-
-                                <p>Essa seria a nossa lista no primeiro loop que realizamos: [6, 3, 5, 1, 9].</p>
-
-                                <p>E então, continuaremos o processo mas agora procurando o segundo maior número, dado que o maior já foi encontrado.</p>
-
-                                <p>O algoritmo finalizará quando nenhum número na posição X + 1 for menor do que o número na posição X.</p>
-
-                                <p>Quando isso acontecer, a variável "sort" será true e, portanto, iremos retornar o array ordenado.</p>
                             </article>
                         : 
                         // If the user click on USA flag, then change the language of the text
-                        <article>
-                            <div>
-                                <h2><p>Bubble Sort is considered an essential and basic sort algorithm.</p></h2>
+                            <article>
+                                    <div>
+                                        <h2><p>The Merge Sort algorithm is one of the most efficient to sort a list, even used by many languages.</p></h2>
 
-                                <p>Despite being the first ordering algorithm we learned, it is not one of the most efficient.</p>
+                                        <p>In my opinion, it should be one of the last (along with Quick Sort) to be studied, as its concept is less intuitive than the others.</p>
+                                    </div>
 
-                                <p>This inefficiency is because Bubble Sort takes longer to execute (high time complexity) its function than many other sorting algorithms.</p>
-                            </div>
+                                <p>Despite being a sophisticated algorithm, Merge Sort is "unable" to sort an initial list with more than one element.</p>
 
-                        <p>Let's go to an example:</p>
-
-                        <code>[9, 6, 3, 5, 1]</code>
-
-                        <p>What is the best way to sort the values ​​above?</p>
-
-                        <p>According to Bubble Sort, it is to compare all available values, add the highest value in the last position and repeat the process until you have an organized list.</p>
-
-                        <p>Let's sort according to Bubble Sort!</p>
-                        
-                        <h3>1) The first comparison will be number 9 with number 6.</h3>
-
-                        <p>Because 9 is greater than 6, we would compare 9 (highest number) with the following number, which is 3.</p>
-
-                            <div>
-                                <h3>2) The second comparison would be between 9 and 3.</h3>
-
-                                <p>9 is greater than 3, so we'll continue with 9 (remember, our goal is to find the highest value and add it at the end of the array).</p>
+                                <p>This means it will break a list of integer numbers into small lists of just one number and then reassemble the elements in the desired order.</p>
                                 
-                                <h3>3) Third comparison: 9 and 5.</h3>
-
-                                <p>9 {'>'} 5 = true</p>
+                                <p>Let's take the following list of integers:</p>
                                 
-                                <p>We can go on with the number 9.</p>
+                                <code>[5, 2, 6, 2, 1, 4, 8, 7]</code>
 
-                            </div>
-                        <h3>4) The fourth and last comparison would be between 9 and 1.</h3>
+                                <p>Merge will break the entire structure above until only 8 distinct elements are left; let's go to an illustrative example: </p>
+                                
+                                <section>
+                                    <img src={mergeSortBreak} alt="breaking the array"/>
+                                </section>
+                                
+                                <div>
+                                    <h3>With the elements separated, we can do the reverse process to build our sorted list from smaller, sorted lists.</h3>
+                                </div>
 
-                        <p>Since 9 is greater than 1 (this change happened because we already went through all the values on the array), the number 9 would take the number 1 position (at the end of the list).</p>
+                                <section>
+                                    <img src={mergeSortMerging} alt="merging the array"/>
+                                </section>
 
-                        <p>This would be our list in the first loop: [6, 3, 5, 1, 9].</p>
-
-                        <p>And then, we will continue the process but now looking for the second-highest number as the highest has already been found.</p>
-
-                        <p>The algorithm will terminate when all the numbers at position X + 1 are less than those at position X.</p>
-
-                        <p>The variable "sort" will be "true" when this happens. </p>
-                    </article>
+                            </article>
                         }
                     </Text>
                 </section>

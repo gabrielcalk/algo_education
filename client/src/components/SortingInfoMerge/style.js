@@ -22,7 +22,7 @@ export const InfoEachAlgo = styled.section`
 `
 
 export const Text = styled.article`
-    line-height: 3.3em;
+    line-height: 3em;
     padding: 0 30px 0 30px;
     
     div{
@@ -31,6 +31,18 @@ export const Text = styled.article`
         background-color: var(--third_color);
         background-size: cover;
         color: var(--first_color);
+    }
+
+    section{
+        display: flex;
+        justify-content: center
+    }
+    
+    img{
+        width: 40%;
+        margin: 35px 0;
+        border: 1px solid var(--forth_color);
+        border-radius: 5px;
     }
 `
 

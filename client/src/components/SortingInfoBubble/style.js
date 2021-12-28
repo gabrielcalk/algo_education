@@ -22,7 +22,7 @@ export const InfoEachAlgo = styled.section`
 `
 
 export const Text = styled.article`
-    line-height: 3.3em;
+    line-height: 3em;
     padding: 0 30px 0 30px;
     
     div{
