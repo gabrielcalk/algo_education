@@ -17,6 +17,7 @@ export const GlobalStyle = createGlobalStyle`
 
     /* font-size: 16px; (Desktop) */
     html {
+        height: 100%;
         @media(max-width: 1080px) {
             font-size: 93.75%; //15px
         }
@@ -26,8 +27,11 @@ export const GlobalStyle = createGlobalStyle`
     }
     /* REM  = 1rem = font-size */
     body {
-        background: var(--background);
+        position: relative;
+        margin: 0;
+        min-height: 100%;
         -webkit-font-smoothing: antialiased;
+        padding-bottom: 18rem;
     }
     
     body, input, textarea, button {

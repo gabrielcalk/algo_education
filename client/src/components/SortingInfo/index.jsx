@@ -4,7 +4,7 @@ function RenderSortingInfo(props) {
     return (
         <div>
             <h3>Info Sorting</h3>
-            <Link to="/sorting/algo">Learn more...</Link>
+            <Link to="/sorting/info">Learn more...</Link>
         </div>
     );
 }
