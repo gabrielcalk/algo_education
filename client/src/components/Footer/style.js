@@ -7,7 +7,7 @@ export const Footer = styled.footer`
     padding: 25px;
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: 80;
     left: 0;
 
     .sectionAboutAndLinks{

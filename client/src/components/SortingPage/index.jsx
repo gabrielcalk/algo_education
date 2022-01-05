@@ -55,9 +55,7 @@ function RenderSortPage(props) {
             />
             
             {/* Info (sorting) section */}
-            <section>
                 <RenderSortingInfo/>
-            </section>
         </>
     );
 }

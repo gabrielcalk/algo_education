@@ -31,7 +31,7 @@ export const GlobalStyle = createGlobalStyle`
         margin: 0;
         min-height: 100%;
         -webkit-font-smoothing: antialiased;
-        padding-bottom: 18rem;
+        /* padding-bottom: 18rem; */
     }
     
     body, input, textarea, button {

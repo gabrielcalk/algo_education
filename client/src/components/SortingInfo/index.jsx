@@ -1,11 +1,15 @@
 import { Link } from "react-router-dom";
+import { Container } from "./style";
 
 function RenderSortingInfo(props) {
     return (
-        <div>
-            <h3>Info Sorting</h3>
-            <Link to="/sorting/info">Learn more...</Link>
-        </div>
+        <Container>
+            <div>
+                <h3>Info Sorting</h3>
+            </div>
+            
+            <Link to="/sorting/info"><button>Learn More</button></Link>
+        </Container>
     );
 }
 

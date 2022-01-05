@@ -3,12 +3,14 @@ import RenderAlgoInfoPage from './components/SortingAlgoPage/index.jsx'
 import {GlobalStyle} from './styleGlobal/global'
 import { BrowserRouter, Routes, Route} from "react-router-dom";
 import RenderFooter from './components/Footer/index.jsx'
+import RenderNav from './components/Nav/index.jsx'
 
 function App() {
   return (
     <>
       <GlobalStyle/>
       <BrowserRouter>
+      <RenderNav/>
         <Routes>
           <Route exact path="/sorting" element={<RenderSortPage/>} />
           <Route exact path="/sorting/info" element={<RenderAlgoInfoPage/>} />

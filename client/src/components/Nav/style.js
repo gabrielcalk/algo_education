@@ -1,12 +1,13 @@
 import styled from 'styled-components'
 
-export const StyleNav = styled.nav`
-/* Adding a display flex, flex wrap, defining the nav to a row and some margin on the right */
+export const Container = styled.header`
+    /* Adding a display flex, flex wrap, defining the nav to a row and some margin on the right */
         display:flex;
         flex-wrap:wrap;
-        flex-direction: row;
-        justify-content: center;
+        align-items:center;
+        justify-content: space-between;
         padding: 5px;
+        background-color: var(--third_color);
 
     /* Adding some color, margin, padding and background animation on the anchors that are inside to the nav tag */
     button {
@@ -47,8 +48,23 @@ export const StyleNav = styled.nav`
         transform: scaleY(1);
         transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
     }
+
+    h2{
+        color: var(--first_color);
+    }
+
+    div{
+        display: flex;
+        align-items: center;
+    }
+
 `
 
-export const Header = styled.header`
-    background-color: var(--third_color);
+export const Logo = styled.img`
+    margin-left: 8px;
+    width: 60px;
+    height: 60px;
+    float: left;
 `
+
+

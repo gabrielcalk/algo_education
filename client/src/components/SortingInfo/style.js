@@ -1,12 +1,15 @@
 import styled from 'styled-components'
 
-export const StyleNav = styled.nav`
-/* Adding a display flex, flex wrap, defining the nav to a row and some margin on the right */
-        display:flex;
-        flex-wrap:wrap;
-        flex-direction: row;
-        justify-content: center;
-        padding: 5px;
+export const Container = styled.section`
+    background: var(--second_color);
+    padding-top: 15px;
+    /* height: 50vw; */
+    margin-top: 30px;
+    border-top: 5px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     /* Adding some color, margin, padding and background animation on the anchors that are inside to the nav tag */
     button {
@@ -47,8 +50,5 @@ export const StyleNav = styled.nav`
         transform: scaleY(1);
         transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
     }
-`
 
-export const Header = styled.header`
-    background-color: var(--third_color);
 `

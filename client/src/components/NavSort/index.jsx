@@ -1,11 +1,9 @@
-import {StyleNav, Logo, Header} from './style'
-import logo from '../../images/algo_logo.png'
+import {StyleNav, Header} from './style'
 
 function RenderNavBarSort({handleBubbleSort,  handleMergeSort, handleInsertionSort}) {
     return (
         <Header>
             <header>
-                <Logo src={logo}/>
                 <StyleNav>
                     <nav>     
                         <button onClick={() => {handleBubbleSort()}}>BubbleSort</button>
