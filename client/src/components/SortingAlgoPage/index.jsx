@@ -1,7 +1,7 @@
 import {useState} from 'react';
 
 // Importing Sorting Algo information
-import RenderSortingInsertionInfo from '../SortingInfoInsertion';
+import RenderSortingSelectionInfo from '../SortingInfoSelection';
 import RenderSortingBubbleInfo from '../SortingInfoBubble';
 import RenderSortingMergeInfo from '../SortingInfoMerge';
 
@@ -18,7 +18,7 @@ function RenderAlgoInfoPage() {
         else if (showInfo === "merge")
             return <RenderSortingMergeInfo/>
         else
-            return <RenderSortingInsertionInfo/>
+            return <RenderSortingSelectionInfo/>
     }
 
     return (

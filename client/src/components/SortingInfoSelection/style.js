@@ -32,6 +32,11 @@ export const Text = styled.article`
         background-size: cover;
         color: var(--first_color);
     }
+
+    span{
+        color: var(--second_color);
+        font-size: 1.2rem;
+    }
 `
 
 export const DivFlag = styled.div`
