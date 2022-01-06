@@ -6,7 +6,7 @@ export const Container = styled.header`
         flex-wrap:wrap;
         align-items:center;
         justify-content: space-between;
-        padding: 5px;
+        padding: 10px;
         background-color: var(--third_color);
 
     /* Adding some color, margin, padding and background animation on the anchors that are inside to the nav tag */

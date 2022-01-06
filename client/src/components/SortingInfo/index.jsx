@@ -6,9 +6,9 @@ function RenderSortingInfo(props) {
         <Container>
             <div>
                 <h3>Info Sorting</h3>
+                <Link to="/sorting/info"><button>Learn More</button></Link>
             </div>
             
-            <Link to="/sorting/info"><button>Learn More</button></Link>
         </Container>
     );
 }

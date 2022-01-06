@@ -3,13 +3,12 @@ import styled from 'styled-components'
 export const Container = styled.section`
     background: var(--second_color);
     padding-top: 15px;
-    /* height: 50vw; */
+    height: 500px;
     margin-top: 30px;
-    border-top: 5px solid black;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+
+    div{
+        margin: 0 auto;
+    }
 
     /* Adding some color, margin, padding and background animation on the anchors that are inside to the nav tag */
     button {

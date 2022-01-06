@@ -18,6 +18,7 @@ import animationSelection from '../../utils/sorting/selectionSort/animationsSele
 // Importing NavBar and Main
 import RenderNavBarSort from '../NavSort/index.jsx';
 import RenderArray from '../SortingVisual'
+import { Container } from './style';
 
 function RenderSortPage(props) {
 
@@ -43,7 +44,7 @@ function RenderSortPage(props) {
     }
 
     return (
-        <>
+        <Container>
             <RenderNavBarSort 
                 handleBubbleSort = {handleBubbleSort} 
                 handleMergeSort = {handleMergeSort}
@@ -56,7 +57,7 @@ function RenderSortPage(props) {
             
             {/* Info (sorting) section */}
                 <RenderSortingInfo/>
-        </>
+        </Container>
     );
 }
 

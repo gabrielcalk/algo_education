@@ -7,7 +7,7 @@ function RenderNav(props) {
     return (
         <Container>
             <div>
-                <Logo src={logo} />
+                <Link to=""><Logo src={logo} /></Link>
                 <h2>Algo Education</h2>
             </div>
             <div>

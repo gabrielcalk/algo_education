@@ -6,7 +6,6 @@ import {Footer} from './style'
 function RenderFooter() {
     return (
         <Footer>
-        <footer>
             <section className="sectionAboutAndLinks">
                 <div className="divAbout">
                     <h4>About</h4>
@@ -32,7 +31,6 @@ function RenderFooter() {
                     </svg>
                 </a>
             </section>
-        </footer>
         </Footer>
     );
 }
