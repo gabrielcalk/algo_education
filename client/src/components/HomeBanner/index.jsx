@@ -1,14 +1,15 @@
 import {Carousel} from 'react-bootstrap/'
 import 'bootstrap/dist/css/bootstrap.css';
-import setupPcImg from '../../images/setup_pc.jpg'
+import PcImg from '../../images/pc.jpg'
 import womamPcImg from '../../images/womam_pc.jpg'
+import { Image } from './style';
 
 function RenderBannerHome(props) {
     return (
         <Carousel>
-            <Carousel.Item interval={1000}>
-                <img
-                    className="d-block w-100 h-75"
+            <Carousel.Item interval={2000}>
+                <Image
+                    className="d-block w-100"
                     src={womamPcImg}
                     alt="Womam with Pc"
                 />
@@ -19,9 +20,9 @@ function RenderBannerHome(props) {
             </Carousel.Item>
 
             <Carousel.Item>
-                <img
+                <Image
                     className="d-block w-100"
-                    src={setupPcImg}
+                    src={PcImg}
                     alt="Computer Setup"
                 />
                 <Carousel.Caption>
