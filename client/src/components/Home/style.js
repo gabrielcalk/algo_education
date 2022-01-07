@@ -8,7 +8,7 @@ export const Container = styled.main`
         display: flex;
         align-items: center;
         flex-wrap: wrap;
-        margin-top: 8rem;
+        margin-top: 6rem;
         
         &:last-child{
             margin-bottom: 8rem;
