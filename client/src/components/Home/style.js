@@ -2,6 +2,9 @@ import styled from 'styled-components'
 
 export const Container = styled.main`
     section{
+        opacity: 0;
+        transform: translateX(100px);
+        transition: 2200ms;
         display: flex;
         align-items: center;
         flex-wrap: wrap;
@@ -25,6 +28,11 @@ export const Container = styled.main`
                 text-align: center;
             }
         }
+    }
+
+    section.show{
+        transform: translateX(0);
+        opacity: 1;
     }
 
 `
