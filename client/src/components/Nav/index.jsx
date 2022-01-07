@@ -13,6 +13,7 @@ function RenderNav(props) {
             <div>
                 <Link to="/sorting/"><button>Sort</button></Link>
                 <Link to="/searching/"><button>Search</button></Link>
+                <Link to="/path/"><button>Path</button></Link>
             </div>
         </Container>
     );
