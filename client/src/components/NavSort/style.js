@@ -11,7 +11,6 @@ export const StyleNav = styled.nav`
     /* Adding some color, margin, padding and background animation on the anchors that are inside to the nav tag */
     button {
         text-decoration: none;
-        padding: 10px;
         margin-right: 10px;
         background-image: linear-gradient();
         border: 0px;
@@ -21,7 +20,8 @@ export const StyleNav = styled.nav`
         background-position: bottom;
         transition: all 0.25s ease-in;
         position:relative;
-        margin:0.4em;  padding:1em;
+        margin:0.4em;  
+        padding: 0.6rem;
         background-color: var(--third_color);
         color: var(--first_color);
         transform: translateZ(0);

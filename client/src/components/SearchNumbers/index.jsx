@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
+import animationsLinear from "../../utils/algorithm/search/linearSearch/animationsLinear";
 
-import linearSearch from "../../utils/algorithm/search/linearSearch";
+import linearSearch from "../../utils/algorithm/search/linearSearch/linearSearch";
+import RenderNavSearch from "../NavSearch";
 
 import { Container } from "./style.js";
 
@@ -20,31 +22,22 @@ function RenderNumbers(props) {
       };
       array.push(numberData);
     }
-
+    console.log(array);
     setNumbers(array);
   }, []);
 
   function handleSelectNumber() {
     const result = linearSearch(numbers, inputNumber);
-
-    setNumbers([])
-
-    for (let i = 0; i < result.length; i++) {
-      setTimeout(() => {
-        setNumbers(oldState => [...oldState, result[i]])
-      }, i*100);
-    }
+    animationsLinear(result, setNumbers);
   }
 
   return (
     <>
-      <input
-        placeholder="Number"
-        value={inputNumber}
-        type="number"
-        onChange={(event) => setInputNumber(event.target.value)}
+      <RenderNavSearch
+        inputNumber={inputNumber}
+        handleSelectNumber={handleSelectNumber}
+        setInputNumber={setInputNumber}
       />
-      <button onClick={handleSelectNumber}>TEST</button>
 
       <Container>
         {numbers.map((number) => (

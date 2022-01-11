@@ -1,15 +1,20 @@
 import styled from 'styled-components'
 
-export const StyleNav = styled.nav`
-/* Adding a display flex, flex wrap, defining the nav to a row and some margin on the right */
-        display:flex;
-        flex-wrap:wrap;
-        flex-direction: row;
+export const Container = styled.div`
+    div{
+        display: flex;
         justify-content: center;
-        padding: 5px;
+        align-items: center;
+        justify-content: space-evenly;
+        margin: 1rem 0;
+    
+        &:last-child{
+            flex-direction: column;
+            margin: 0 auto;
+            width: 10rem;
+        }
 
-    /* Adding some color, margin, padding and background animation on the anchors that are inside to the nav tag */
-    button {
+        button {
         text-decoration: none;
         margin-right: 10px;
         background-image: linear-gradient();
@@ -47,8 +52,7 @@ export const StyleNav = styled.nav`
         transform: scaleY(1);
         transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
     }
-`
+    }
 
-export const Header = styled.header`
-    background-color: var(--third_color);
+
 `
