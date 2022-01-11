@@ -8,7 +8,7 @@ export function animateDijkstra(visitedNodesInOrder, nodesInShortestPathOrder) {
     }
     setTimeout(() => {
       const node = visitedNodesInOrder[i];
-      console.log(node)
+
       document.getElementById(`node-${node.row}-${node.col}`).className =
         "node node-visited";
     }, 10 * i);

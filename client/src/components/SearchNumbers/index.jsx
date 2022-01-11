@@ -27,16 +27,11 @@ function RenderNumbers(props) {
   function handleSelectNumber() {
     const result = linearSearch(numbers, inputNumber);
 
-    // setNumbers([])
- 
+    setNumbers([])
+
     for (let i = 0; i < result.length; i++) {
       setTimeout(() => {
-        let array = [...numbers];
-        array[i] = result[i]
-
-        // setNumbers(oldState => [...oldState, result[i]])
-        
-        setNumbers(array)
+        setNumbers(oldState => [...oldState, result[i]])
       }, i*100);
     }
   }
