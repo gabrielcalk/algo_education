@@ -4,7 +4,7 @@ import RenderSortPage from './page/Sort/index.jsx'
 import RenderPathPage from './page/Path/index.jsx';
 import RenderSearchPage from './page/Search/index.jsx'
 
-import RenderAlgoInfoPage from './components/SortingAlgoPage/index.jsx'
+import RenderAlgoInfoPage from './page/SortInfo/index.jsx'
 import RenderFooter from './components/Footer/index.jsx'
 import RenderNav from './components/Nav/index.jsx'
 import RenderHomePage from './page/Home/index.jsx';

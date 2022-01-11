@@ -1,7 +1,9 @@
+import RenderNumbers from "../../components/SearchNumbers";
+
 function RenderSearchPage(props) {
     return (
         <main>
-            <h1>TESTE</h1>
+            <RenderNumbers/>
         </main>
     );
 }

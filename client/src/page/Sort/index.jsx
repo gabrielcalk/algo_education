@@ -4,16 +4,16 @@ import {useState} from 'react';
 import RenderSortingInfo from '../../components/SortingInfo';
 
 // Importing algorithm Bubble Sort and the animation
-import bubbleSort from '../../utils/sorting/bubbleSort/bubbleSort.jsx';
-import animationBubble from '../../utils/sorting/bubbleSort/animationsBubble.jsx';
+import bubbleSort from '../../utils/algorithm/sorting/bubbleSort/bubbleSort.jsx';
+import animationBubble from '../../utils/algorithm/sorting/bubbleSort/animationsBubble.jsx';
 
 // Importing algorithm Merge Sort and the animation
-import mergeSort from '../../utils/sorting/mergeSort/mergeSort.jsx';
-import animationMerge from '../../utils/sorting/mergeSort/animationsMerge.jsx';
+import mergeSort from '../../utils/algorithm/sorting/mergeSort/mergeSort.jsx';
+import animationMerge from '../../utils/algorithm/sorting/mergeSort/animationsMerge.jsx';
 
 // IMporting algorithm Insertion Sort and the animation
-import insertionSort from '../../utils/sorting/selectionSort/selectionSort.jsx';
-import animationSelection from '../../utils/sorting/selectionSort/animationsSelection'
+import insertionSort from '../../utils/algorithm/sorting/selectionSort/selectionSort.jsx';
+import animationSelection from '../../utils/algorithm/sorting/selectionSort/animationsSelection'
 
 // Importing NavBar and Main
 import RenderNavBarSort from '../../components/NavSort/index.jsx';

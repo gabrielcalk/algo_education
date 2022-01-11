@@ -1,12 +1,12 @@
 import {useState} from 'react';
 
 // Importing Sorting Algo information
-import RenderSortingSelectionInfo from '../SortingInfoSelection';
-import RenderSortingBubbleInfo from '../SortingInfoBubble';
-import RenderSortingMergeInfo from '../SortingInfoMerge';
+import RenderSortingSelectionInfo from '../../components/SortingInfoSelection';
+import RenderSortingBubbleInfo from '../../components/SortingInfoBubble';
+import RenderSortingMergeInfo from '../../components/SortingInfoMerge';
 
 // Importing the buttons to let the user choose one sort algo to learn more about it
-import DisplayButtonsInfo from '../SortingButtonInfo';
+import DisplayButtonsInfo from '../../components/SortingButtonInfo';
 
 function RenderAlgoInfoPage() {
     const [showInfo, setShowInfo] = useState('');

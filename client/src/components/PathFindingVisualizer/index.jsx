@@ -5,8 +5,8 @@ import RenderNavBarPath from "../NavPath/index.jsx";
 import {
   dijkstra,
   getNodesInShortestPathOrder,
-} from "../../utils/path/dijkstra/dijkstraPath";
-import { animateDijkstra } from "../../utils/path/dijkstra/animationDijkstra";
+} from "../../utils/algorithm/path/dijkstra/dijkstraPath";
+import { animateDijkstra } from "../../utils/algorithm/path/dijkstra/animationDijkstra";
 
 const START_NODE_ROW = 1;
 const START_NODE_COL = 1;
