@@ -6,7 +6,7 @@ export const StyleNav = styled.nav`
         flex-wrap:wrap;
         flex-direction: row;
         justify-content: center;
-        padding: 5px;
+        padding: 8px;
 
     /* Adding some color, margin, padding and background animation on the anchors that are inside to the nav tag */
     button {

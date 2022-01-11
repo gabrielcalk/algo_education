@@ -19,6 +19,10 @@ export const InfoEachAlgo = styled.section`
     div{
         line-height: 2rem;
     }
+
+    section{
+        margin:0 2rem;
+    }
 `
 
 export const Text = styled.article`

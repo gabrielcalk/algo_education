@@ -3,13 +3,9 @@ import {StyleNav, Header} from './style'
 function RenderNavBarPath({visualizeDijkstra}) {
     return (
         <Header>
-            <header>
-                <StyleNav>
-                    <nav>     
+                <StyleNav>   
                         <button onClick={() => {visualizeDijkstra()}}>Dijkstra's</button>
-                    </nav>
                 </StyleNav>
-            </header>
         </Header>
     );
 }

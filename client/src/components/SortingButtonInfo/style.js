@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const DivButton = styled.div`
+    margin: 0.5rem 0;
     display: flex;
     justify-content: space-evenly;
     justify-content: center;

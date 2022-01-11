@@ -22,7 +22,8 @@ function RenderArray({heightArrays, setHeightArrays}) {
     // sometimes on 130 I was receiving one bug, so I added this line of code to make sure that will render array bars
     if (newValue === 130) {
       setSizeArray(129);
-    }
+    } 
+
     setSizeArray(newValue);
     setHeightArrays('');
   }
