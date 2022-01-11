@@ -6,7 +6,7 @@ import RenderSortingBubbleInfo from '../SortingInfoBubble';
 import RenderSortingMergeInfo from '../SortingInfoMerge';
 
 // Importing the buttons to let the user choose one sort algo to learn more about it
-import DisplayButtonsInfo from '../SortButtonInfo';
+import DisplayButtonsInfo from '../SortingButtonInfo';
 
 function RenderAlgoInfoPage() {
     const [showInfo, setShowInfo] = useState('');

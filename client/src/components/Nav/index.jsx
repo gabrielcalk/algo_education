@@ -11,8 +11,8 @@ function RenderNav(props) {
                 <h2>Algo Education</h2>
             </div>
             <div>
-                <Link to="/sorting/"><button>Sort</button></Link>
-                <Link to="/searching/"><button>Search</button></Link>
+                <Link to="/sort/"><button>Sort</button></Link>
+                <Link to="/search/"><button>Search</button></Link>
                 <Link to="/path/"><button>Path</button></Link>
             </div>
         </Container>

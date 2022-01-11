@@ -1,5 +1,5 @@
 import {useState, useEffect, useRef, useMemo} from 'react'
-import RenderBannerHome from "../HomeBanner";
+import RenderBannerHome from "../../components/HomeBanner";
 import { Container } from "./style";
 import gabrielImg from '../../images/gabriel_image.jpg'
 import pcCodeImg from '../../images/pc_code.jpg'

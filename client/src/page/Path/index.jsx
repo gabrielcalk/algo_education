@@ -1,4 +1,4 @@
-import RenderPathFindingVisualizer from '../PathFindingVisualizer/index.jsx'
+import RenderPathFindingVisualizer from '../../components/PathFindingVisualizer/index.jsx'
 
 function RenderPathPage() {
     return (

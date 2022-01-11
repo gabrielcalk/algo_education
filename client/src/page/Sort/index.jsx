@@ -1,7 +1,7 @@
 import {useState} from 'react';
 
 // Importing Sorting Algo information
-import RenderSortingInfo from '../SortingInfo';
+import RenderSortingInfo from '../../components/SortingInfo';
 
 // Importing algorithm Bubble Sort and the animation
 import bubbleSort from '../../utils/sorting/bubbleSort/bubbleSort.jsx';
@@ -16,8 +16,8 @@ import insertionSort from '../../utils/sorting/selectionSort/selectionSort.jsx';
 import animationSelection from '../../utils/sorting/selectionSort/animationsSelection'
 
 // Importing NavBar and Main
-import RenderNavBarSort from '../NavSort/index.jsx';
-import RenderArray from '../SortingVisual'
+import RenderNavBarSort from '../../components/NavSort/index.jsx';
+import RenderArray from '../../components/SortingVisual'
 import { Container } from './style';
 
 function RenderSortPage(props) {
