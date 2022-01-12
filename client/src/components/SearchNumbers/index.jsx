@@ -6,9 +6,10 @@ import linearSearch from "../../utils/algorithm/search/linearSearch/linearSearch
 import animationsLinear from "../../utils/algorithm/search/linearSearch/animationsLinear";
 import binarySearch from "../../utils/algorithm/search/binarySearch/binarySearch";
 
-import {bubbleSortHelper} from '../../utils/helper/sortAlgoHelper'
+import { bubbleSortHelper } from "../../utils/helper/sortAlgoHelper";
 
 import { Container } from "./style.js";
+import animationsBinary from "../../utils/algorithm/search/binarySearch/animationsBinary";
 
 function RenderNumbers(props) {
   const [numbers, setNumbers] = useState([]);
@@ -24,22 +25,22 @@ function RenderNumbers(props) {
         element,
         checked: false,
       };
-      
+
       array.push(numberData);
     }
 
-    bubbleSortHelper(array)
+    bubbleSortHelper(array);
 
     setNumbers(array);
   }, []);
 
   function handleSelectNumber(type) {
-    if(type === 'linear'){
+    if (type === "linear") {
       const result = linearSearch(numbers, inputNumber);
       animationsLinear(result, setNumbers);
-    } else if(type === 'binary'){
-      const result = binarySearch(numbers, inputNumber)
-      console.log(result);
+    } else if (type === "binary") {
+      const result = binarySearch(numbers, inputNumber);
+      animationsBinary(result, setNumbers);
     }
   }
 
@@ -60,6 +61,10 @@ function RenderNumbers(props) {
                 ? "checked"
                 : number.checked === "found"
                 ? "found"
+                : number.checked === "start"
+                ? "start"
+                : number.checked === "end"
+                ? "end"
                 : "noChecked"
             }
           >

@@ -21,6 +21,14 @@ export const Container = styled.section`
             background-color: var(--forth_color);
         }
 
+        &.start{
+            background-color: pink;
+        }
+
+        &.end{
+            background-color: green;
+        }
+
         h3{
             padding: 0.2rem;
             text-align: center;
