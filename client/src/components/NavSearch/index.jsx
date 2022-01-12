@@ -4,8 +4,8 @@ function RenderNavSearch({ inputNumber, handleSelectNumber, setInputNumber }) {
   return (
     <Container>
       <div>
-        <button onClick={handleSelectNumber}>Linear Search</button>
-        <button>Binary Search</button>
+        <button onClick={() => handleSelectNumber('linear')}>Linear Search</button>
+        <button onClick={() => handleSelectNumber('binary')}>Binary Search</button>
       </div>
       <div>
         <span>Pick a Number</span>

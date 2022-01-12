@@ -1,8 +1,12 @@
 import { useState, useEffect } from "react";
-import animationsLinear from "../../utils/algorithm/search/linearSearch/animationsLinear";
+
+import RenderNavSearch from "../NavSearch";
 
 import linearSearch from "../../utils/algorithm/search/linearSearch/linearSearch";
-import RenderNavSearch from "../NavSearch";
+import animationsLinear from "../../utils/algorithm/search/linearSearch/animationsLinear";
+import binarySearch from "../../utils/algorithm/search/binarySearch/binarySearch";
+
+import {bubbleSortHelper} from '../../utils/helper/sortAlgoHelper'
 
 import { Container } from "./style.js";
 
@@ -13,22 +17,30 @@ function RenderNumbers(props) {
   useEffect(() => {
     let array = [];
     for (let i = 0; i < 50; i++) {
-      let element = Math.floor(Math.random() * 150);
+      let element = Math.floor(Math.random() * 200);
 
       let numberData = {
         id: i,
         element,
         checked: false,
       };
+      
       array.push(numberData);
     }
-    console.log(array);
+
+    bubbleSortHelper(array)
+
     setNumbers(array);
   }, []);
 
-  function handleSelectNumber() {
-    const result = linearSearch(numbers, inputNumber);
-    animationsLinear(result, setNumbers);
+  function handleSelectNumber(type) {
+    if(type === 'linear'){
+      const result = linearSearch(numbers, inputNumber);
+      animationsLinear(result, setNumbers);
+    } else if(type === 'binary'){
+      const result = binarySearch(numbers, inputNumber)
+      console.log(result);
+    }
   }
 
   return (
