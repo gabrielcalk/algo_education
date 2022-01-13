@@ -1,5 +1,6 @@
 const binarySearch = (numbers, element) => {
-  const array = numbers.slice();
+  const array = [...numbers];
+  const animation = [];
 
   let start = 0;
   let end = array.length - 1;
@@ -7,23 +8,33 @@ const binarySearch = (numbers, element) => {
   array[start].checked = "start";
   array[end].checked = "end";
 
+  animation.push(array[start], array[end]);
+
   while (end > start) {
     let mid = Math.floor((start + end) / 2);
-    array[mid].checked = true;
+    array[mid].checked = "middle";
+    animation.push(array[mid]);
 
     if (array[mid].element === parseInt(element)) {
       array[mid].checked = "found";
-      return array;
+      animation.push(array[mid]);
+      return animation;
     } else if (array[mid].element > element) {
       end = mid - 1;
-      // I was having some buggs, so I add this if to fixed
-      if (end !== -1) array[end].checked = "end";
+
+      if (end === -1) {
+        continue;
+      }
+
+      array[end].checked = "endAfter";
+      animation.push(array[end]);
     } else {
       start = mid + 1;
-      array[start].checked = "start";
+      array[start].checked = "startAfter";
+      animation.push(array[start]);
     }
   }
-  return array;
+  return animation;
 };
 
 export default binarySearch;

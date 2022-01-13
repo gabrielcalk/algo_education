@@ -25,12 +25,9 @@ function RenderNumbers(props) {
         element,
         checked: false,
       };
-
       array.push(numberData);
     }
-
     bubbleSortHelper(array);
-
     setNumbers(array);
   }, []);
 
@@ -39,8 +36,8 @@ function RenderNumbers(props) {
       const result = linearSearch(numbers, inputNumber);
       animationsLinear(result, setNumbers);
     } else if (type === "binary") {
-      const result = binarySearch(numbers, inputNumber);
-      animationsBinary(result, setNumbers);
+      const result = binarySearch(numbers, inputNumber, setNumbers);
+      animationsBinary(result, numbers, setNumbers);
     }
   }
 
@@ -53,11 +50,11 @@ function RenderNumbers(props) {
       />
 
       <Container>
-        {numbers.map((number) => (
+        {numbers.map((number, idx) => (
           <section
-            key={number.id}
+            key={idx}
             className={
-              number.checked === true
+              number.checked === "checked"
                 ? "checked"
                 : number.checked === "found"
                 ? "found"
@@ -65,6 +62,12 @@ function RenderNumbers(props) {
                 ? "start"
                 : number.checked === "end"
                 ? "end"
+                : number.checked === "middle"
+                ? "middle"
+                : number.checked === "startAfter"
+                ? "startAfter"
+                : number.checked === "endAfter"
+                ? "endAfter"
                 : "noChecked"
             }
           >

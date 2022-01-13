@@ -1,11 +1,16 @@
-function animationsBinary(result, setNumbers) {
-  setNumbers([]);
+function animationsBinary(result, numbers, setNumbers) {
+  const arrayNumbers = [...numbers]
+  console.log(arrayNumbers)
 
-  for (let i = 0; i < result.length; i++) {
-    // https://stackoverflow.com/questions/29537299/react-how-to-update-state-item1-in-state-using-setstate
-    setTimeout(() => {
-      setNumbers((oldState) => [...oldState, result[i]]);
-    }, i * 100);
+  for (let i = 0; i < arrayNumbers.length; i++) {
+    for (let j = 0; j < result.length; j++) {
+      if (arrayNumbers[i].id === result[j].id) {
+        setTimeout(() => {
+          numbers[i] = result[j];
+          setNumbers(arrayNumbers);
+        }, i * 100);
+      }
+    }
   }
 }
 

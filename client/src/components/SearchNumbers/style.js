@@ -22,11 +22,23 @@ export const Container = styled.section`
         }
 
         &.start{
-            background-color: pink;
+            background-color: green;
+        }
+        
+        &.startAfter{
+            background-color: darkgreen;
+        }
+        
+        &.endAfter{
+            background-color: blue;
+        }
+        
+        &.end{
+            background-color: lightblue;
         }
 
-        &.end{
-            background-color: green;
+        &.middle{
+            background-color: red;
         }
 
         h3{
