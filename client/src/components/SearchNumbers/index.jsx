@@ -49,7 +49,7 @@ function RenderNumbers(props) {
 
   return (
     <>
-    {/* Passing the algorithm functions to the nav search*/}
+      {/* Passing the algorithm functions to the nav search and the state to let the user select one number*/}
       <RenderNavSearch
         inputNumber={inputNumber}
         handleLinearAlgorithm={handleLinearAlgorithm}

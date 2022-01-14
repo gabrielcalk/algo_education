@@ -1,6 +1,11 @@
 import { Container } from "./style";
 
-function RenderNavSearch({ inputNumber, setInputNumber, handleBinaryAlgorithm, handleLinearAlgorithm }) {
+function RenderNavSearch({
+  inputNumber,
+  setInputNumber,
+  handleBinaryAlgorithm,
+  handleLinearAlgorithm,
+}) {
   return (
     <Container>
       <div>

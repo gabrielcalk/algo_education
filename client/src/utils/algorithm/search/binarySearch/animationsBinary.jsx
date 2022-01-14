@@ -1,7 +1,6 @@
 function animationsBinary(result, numbers, setNumbers) {
   
   const arrayNumbers = [...numbers]
-  console.log(arrayNumbers)
 
   for (let i = 0; i < arrayNumbers.length; i++) {
     for (let j = 0; j < result.length; j++) {
@@ -9,7 +8,7 @@ function animationsBinary(result, numbers, setNumbers) {
         setTimeout(() => {
           numbers[i] = result[j];
           setNumbers(arrayNumbers);
-        }, i * 100);
+        }, j * 100);
       }
     }
   }
