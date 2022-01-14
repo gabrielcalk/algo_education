@@ -1,4 +1,5 @@
 function animationsBinary(result, numbers, setNumbers) {
+  
   const arrayNumbers = [...numbers]
   console.log(arrayNumbers)
 

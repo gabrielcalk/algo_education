@@ -1,11 +1,11 @@
 import { Container } from "./style";
 
-function RenderNavSearch({ inputNumber, handleSelectNumber, setInputNumber }) {
+function RenderNavSearch({ inputNumber, setInputNumber, handleBinaryAlgorithm, handleLinearAlgorithm }) {
   return (
     <Container>
       <div>
-        <button onClick={() => handleSelectNumber('linear')}>Linear Search</button>
-        <button onClick={() => handleSelectNumber('binary')}>Binary Search</button>
+        <button onClick={() => handleLinearAlgorithm()}>Linear Search</button>
+        <button onClick={() => handleBinaryAlgorithm()}>Binary Search</button>
       </div>
       <div>
         <span>Pick a Number</span>

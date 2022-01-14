@@ -15,6 +15,7 @@ function RenderNumbers(props) {
   const [numbers, setNumbers] = useState([]);
   const [inputNumber, setInputNumber] = useState(0);
 
+  // Rendering Numbers
   useEffect(() => {
     let array = [];
     for (let i = 0; i < 50; i++) {
@@ -31,21 +32,28 @@ function RenderNumbers(props) {
     setNumbers(array);
   }, []);
 
-  function handleSelectNumber(type) {
-    if (type === "linear") {
-      const result = linearSearch(numbers, inputNumber);
-      animationsLinear(result, setNumbers);
-    } else if (type === "binary") {
-      const result = binarySearch(numbers, inputNumber, setNumbers);
-      animationsBinary(result, numbers, setNumbers);
-    }
+  // Linear Search Algorithm Function
+  function handleLinearAlgorithm() {
+    const result = linearSearch(numbers, inputNumber);
+    // Passing the result to animation function
+    animationsLinear(result, setNumbers);
+  }
+
+  // Binary Search Algorithm function
+  function handleBinaryAlgorithm() {
+    console.log(numbers);
+    const result = binarySearch(numbers, inputNumber);
+    // Passing the result to animation function
+    animationsBinary(result, numbers, setNumbers);
   }
 
   return (
     <>
+    {/* Passing the algorithm functions to the nav search*/}
       <RenderNavSearch
         inputNumber={inputNumber}
-        handleSelectNumber={handleSelectNumber}
+        handleLinearAlgorithm={handleLinearAlgorithm}
+        handleBinaryAlgorithm={handleBinaryAlgorithm}
         setInputNumber={setInputNumber}
       />
 
