@@ -41,7 +41,7 @@ function RenderNumbers(props) {
 
   // Binary Search Algorithm function
   function handleBinaryAlgorithm() {
-    console.log(numbers);
+    console.log(numbers)
     const result = binarySearch(numbers, inputNumber);
     // Passing the result to animation function
     animationsBinary(result, numbers, setNumbers);

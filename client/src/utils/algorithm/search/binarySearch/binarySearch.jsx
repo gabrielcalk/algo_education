@@ -1,5 +1,7 @@
 const binarySearch = (numbers, element) => {
-  const array = [...numbers];
+  
+  const array = JSON.parse(JSON.stringify(numbers));
+
   const animation = [];
 
   let start = 0;
