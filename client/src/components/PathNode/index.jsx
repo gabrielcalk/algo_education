@@ -1,18 +1,15 @@
+import { useDrag } from "react-dnd";
+
 import "./style.css";
 
-function RenderNode({
-  nodeIdx,
-  isStart,
-  isFinish,
-  col,
-  row,
-
-  dragStart,
-  dragEnd,
-  draggingEnd,
-  draggingStart,
-}) {
-
+function RenderNode({ nodeIdx, isStart, isFinish, col, row, nodeGrid }) {
+  const [{ isDragging }, drag] = useDrag(() => ({
+    type: "nodeGrid",
+    item: isStart ? nodeGrid.beginNode : nodeGrid.endNode,
+    collect: (monitor) => ({
+      isDragging: !!monitor.isDragging(),
+    }),
+  }));
   // Adding the respective class on the node
   const extraClassName = isFinish
     ? "node-finish"
@@ -25,18 +22,18 @@ function RenderNode({
   /**
    * Adding the Drag Test and the Style on the start and finish node
    */
-  const dragTest = isFinish ? dragEnd : isStart ? dragStart : null;
+  const dragTest = isFinish ? drag : isStart ? drag : null;
 
   const styleTest = isFinish
     ? {
-        opacity: draggingEnd ? 0.5 : 1,
+        opacity: isDragging ? 0.5 : 1,
         fontSize: 25,
         fontWeight: "bold",
         cursor: "move",
       }
     : isStart
     ? {
-        opacity: draggingStart ? 0.5 : 1,
+        opacity: isDragging ? 0.5 : 1,
         fontSize: 25,
         fontWeight: "bold",
         cursor: "move",

@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-
-import { useDrag } from "react-dnd";
+import { useDrop } from "react-dnd";
 
 import RenderNode from "../PathNode";
 import { Container } from "./style";
@@ -11,34 +10,29 @@ import {
 } from "../../utils/algorithm/path/dijkstra/dijkstraPath";
 import { animateDijkstra } from "../../utils/algorithm/path/dijkstra/animationDijkstra";
 
-const beginNode = {
-  type: "start",
-  START_NODE_ROW: 1,
-  START_NODE_COL: 1,
-};
-
-const endNode = {
-  type: "end",
-  FINISH_NODE_ROW: 15,
-  FINISH_NODE_COL: 35,
-};
+const nodeGrid = {
+  beginNode: {
+    type: "start",
+    START_NODE_ROW: 1,
+    START_NODE_COL: 1,
+  },
+  endNode: {
+    type: "end",
+    FINISH_NODE_ROW: 15,
+    FINISH_NODE_COL: 35,
+  }
+}
 
 function RenderPathFindingVisualizer() {
   const [grid, setGrid] = useState([]);
 
-  const [{ isDragging: draggingStart }, dragStart] = useDrag(() => ({
-    type: beginNode.type,
+  const [{isOver}, drop] = useDrop(() => ({
+    accept: "nodeGrid",
+    drop: (item) => console.log(item),
     collect: (monitor) => ({
-      isDragging: !!monitor.isDragging(),
+      isOver: !!monitor.isOver(),
     }),
-  }));
-
-  const [{ isDragging: draggingEnd }, dragEnd] = useDrag(() => ({
-    type: beginNode.type,
-    collect: (monitor) => ({
-      isDragging: !!monitor.isDragging(),
-    }),
-  }));
+  }))
 
   useEffect(() => {
     const grid = [];
@@ -58,9 +52,9 @@ function RenderPathFindingVisualizer() {
       col,
       row,
       isStart:
-        row === beginNode.START_NODE_ROW && col === beginNode.START_NODE_COL,
+        row === nodeGrid.beginNode.START_NODE_ROW && col === nodeGrid.beginNode.START_NODE_COL,
       isFinish:
-        row === endNode.FINISH_NODE_ROW && col === endNode.FINISH_NODE_COL,
+        row === nodeGrid.endNode.FINISH_NODE_ROW && col === nodeGrid.endNode.FINISH_NODE_COL,
       distance: Infinity,
       isVisited: false,
       isWall: false,
@@ -69,8 +63,8 @@ function RenderPathFindingVisualizer() {
   };
 
   function visualizeDijkstra() {
-    const startNode = grid[beginNode.START_NODE_ROW][beginNode.START_NODE_COL];
-    const finishNode = grid[endNode.FINISH_NODE_ROW][endNode.FINISH_NODE_COL];
+    const startNode = grid[nodeGrid.beginNode.START_NODE_ROW][nodeGrid.beginNode.START_NODE_COL];
+    const finishNode = grid[nodeGrid.endNode.FINISH_NODE_ROW][nodeGrid.endNode.FINISH_NODE_COL];
     const visitedNodesInOrder = dijkstra(grid, startNode, finishNode);
     const nodesInShortestPathOrder = getNodesInShortestPathOrder(finishNode);
     animateDijkstra(visitedNodesInOrder, nodesInShortestPathOrder);
@@ -79,23 +73,19 @@ function RenderPathFindingVisualizer() {
   return (
     <>
       <RenderNavBarPath visualizeDijkstra={visualizeDijkstra} />
-      <Container>
+      <Container ref={drop}>
         {grid.map((row, rowIdx) => (
           <div key={rowIdx}>
             {row.map((node, nodeIdx) => {
               const { row, col, isFinish, isStart } = node;
               return (
                 <RenderNode
-                  dragStart={dragStart}
-                  dragEnd={dragEnd}
-                  draggingEnd={draggingEnd}
-                  draggingStart={draggingStart}
-                  
                   key={nodeIdx}
                   isStart={isStart}
                   isFinish={isFinish}
                   col={col}
                   row={row}
+                  nodeGrid={nodeGrid}
                 />
               );
             })}
