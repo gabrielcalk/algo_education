@@ -7,7 +7,7 @@ export const NameAlgo = styled.h2`
 `
 
 export const InfoEachAlgo = styled.section`
-    margin-top: 70px;
+    margin-top: 60px;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -44,6 +44,10 @@ export const DivFlag = styled.div`
     cursor: pointer;
 
     svg{
-        margin: 40px 3px -7px 3px;
+        margin: 20px 3px -7px 3px;
     }
+`
+
+export const MainContainer = styled.main`
+    padding-bottom: 220px;
 `

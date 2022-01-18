@@ -2,7 +2,7 @@ import {useState} from 'react'
 
 import {ReactComponent as BrazilFlag} from '../../images/brazil_flag.svg'
 import {ReactComponent as USAFlag} from '../../images/usa_flag.svg'
-import {Text, DivFlag, InfoEachAlgo, NameAlgo} from './style.js'
+import {Text, DivFlag, InfoEachAlgo, NameAlgo, MainContainer} from './style.js'
 
 function RenderSortingBubbleInfo(props) {
     const [changeLanguage, setChangeLanguage] = useState("portuguese")
@@ -11,7 +11,7 @@ function RenderSortingBubbleInfo(props) {
         <NameAlgo>
             <h2>Bubble Sort</h2>
         </NameAlgo>
-            <main>
+            <MainContainer>
                 <InfoEachAlgo>
                         <section>
                             <h3>Bubble Sort Algorithm (code): </h3>
@@ -158,7 +158,7 @@ function RenderSortingBubbleInfo(props) {
                         }
                     </Text>
                 </section>
-            </main>
+            </MainContainer>
         </>
     );
 }

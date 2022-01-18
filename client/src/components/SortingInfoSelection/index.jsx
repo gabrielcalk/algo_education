@@ -2,7 +2,7 @@ import {useState} from 'react'
 
 import {ReactComponent as BrazilFlag} from '../../images/brazil_flag.svg'
 import {ReactComponent as USAFlag} from '../../images/usa_flag.svg'
-import {Text, DivFlag, InfoEachAlgo, NameAlgo} from './style.js'
+import {Text, DivFlag, InfoEachAlgo, NameAlgo, MainContainer} from './style.js'
 
 function RenderSortingSelectionInfo() {
     const [changeLanguage, setChangeLanguage] = useState("portuguese")
@@ -11,7 +11,7 @@ function RenderSortingSelectionInfo() {
         <NameAlgo>
             <h2>Selection Sort</h2>
         </NameAlgo>
-            <main>
+            <MainContainer>
                 <InfoEachAlgo>
                         <section>
                             <h3>Selection Sort Algorithm (code): </h3>
@@ -125,7 +125,7 @@ function RenderSortingSelectionInfo() {
                         }
                     </Text>
                 </section>
-            </main>
+            </MainContainer>
         </>
     );
 }

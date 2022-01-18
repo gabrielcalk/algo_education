@@ -1,12 +1,13 @@
 import styled from 'styled-components'
 
 export const Footer = styled.footer`
+
     width: 100%;
     background-color: var(--third_color);
     color: var(--first_color);
-    padding: 25px;
+    padding: 15px;
     position: absolute;
-    bottom: 1;
+    bottom: 0;
 
     .sectionAboutAndLinks{
         display: flex;
@@ -16,7 +17,7 @@ export const Footer = styled.footer`
     }
 
     .divAbout{
-        width: 30%;
+        width: 45%;
     }
 
     .divLinks{
@@ -30,7 +31,6 @@ export const Footer = styled.footer`
     }
 
     .sectionLinks{
-        margin-top: 40px;
         display: flex;
         justify-content: center;
     }

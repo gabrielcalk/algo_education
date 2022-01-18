@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.main`
+    padding-bottom: 200px;
     section{
         opacity: 0;
         transform: translateX(100px);

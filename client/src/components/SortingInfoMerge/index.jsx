@@ -4,7 +4,7 @@ import {ReactComponent as BrazilFlag} from '../../images/brazil_flag.svg'
 import {ReactComponent as USAFlag} from '../../images/usa_flag.svg'
 import mergeSortBreak from '../../images/mergeSortBreak.png'
 import mergeSortMerging from '../../images/mergeSortMerging.png'
-import {Text, DivFlag, InfoEachAlgo, NameAlgo} from './style.js'
+import {Text, DivFlag, InfoEachAlgo, NameAlgo, MainContainer} from './style.js'
 
 function RenderSortingMergeInfo() {
     const [changeLanguage, setChangeLanguage] = useState("portuguese")
@@ -13,7 +13,7 @@ function RenderSortingMergeInfo() {
         <NameAlgo>
             <h2>Merge Sort</h2>
         </NameAlgo>
-            <main>
+            <MainContainer>
                 <InfoEachAlgo>
                         <section>
                             <h3>Merge Sort Algorithm (using recursive function): </h3>
@@ -139,7 +139,7 @@ function RenderSortingMergeInfo() {
                         }
                     </Text>
                 </section>
-            </main>
+            </MainContainer>
         </>
     );
 }

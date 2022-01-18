@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 
 export const Container = styled.section`
-    background: var(--second_color);
+    display: flex;
+    justify-content: center;
     padding-top: 15px;
     height: 500px;
     margin-top: 30px;
