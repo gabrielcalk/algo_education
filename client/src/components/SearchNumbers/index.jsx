@@ -10,6 +10,7 @@ import { bubbleSortHelper } from "../../utils/helper/sortAlgoHelper";
 
 import { Container } from "./style.js";
 import animationsBinary from "../../utils/algorithm/search/binarySearch/animationsBinary";
+import RenderSearchInfo from "../SearchInfo";
 
 function RenderNumbers(props) {
   const [numbers, setNumbers] = useState([]);
@@ -36,6 +37,7 @@ function RenderNumbers(props) {
   function handleLinearAlgorithm() {
     const result = linearSearch(numbers, inputNumber);
     // Passing the result to animation function
+    // I had to call 2 times because I was not able to update the state calling just one
     animationsLinear(result, numbers, setNumbers);
     animationsLinear(result, numbers, setNumbers);
   }
@@ -85,6 +87,7 @@ function RenderNumbers(props) {
           </section>
         ))}
       </Container>
+      <RenderSearchInfo/>
     </>
   );
 }

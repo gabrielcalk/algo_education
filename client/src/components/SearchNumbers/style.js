@@ -22,15 +22,15 @@ export const Container = styled.section`
         }
 
         &.start{
-            background-color: green;
+            background-color: var(--second_color);
         }
         
         &.startAfter{
-            background-color: darkgreen;
+            background-color: #e3256b;
         }
         
         &.endAfter{
-            background-color: blue;
+            background-color: #4169E1;
         }
         
         &.end{
@@ -38,7 +38,8 @@ export const Container = styled.section`
         }
 
         &.middle{
-            background-color: red;
+            background-color: var(--third_color);
+            color:var(--first_color);
         }
 
         h3{

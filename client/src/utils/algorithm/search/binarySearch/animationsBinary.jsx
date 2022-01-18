@@ -13,7 +13,6 @@ function animationsBinary(result, numbers, setNumbers) {
           number.checked = result[j].checked
           arrayFinal[i] = number
           setNumbers(arrayFinal)
-          console.log(result)
         }, j*500);
       }
     }

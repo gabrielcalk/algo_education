@@ -1,6 +1,5 @@
 function animationsLinear(result, numbers, setNumbers) {
   const arrayFinal = [...numbers];
-  console.log(arrayFinal, result);
 
   for (let i = 0; i < numbers.length; i++) {
     for (let j = 0; j < result.length; j++) {
