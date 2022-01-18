@@ -36,7 +36,8 @@ function RenderNumbers(props) {
   function handleLinearAlgorithm() {
     const result = linearSearch(numbers, inputNumber);
     // Passing the result to animation function
-    animationsLinear(result, setNumbers);
+    animationsLinear(result, numbers, setNumbers);
+    animationsLinear(result, numbers, setNumbers);
   }
 
   // Binary Search Algorithm function

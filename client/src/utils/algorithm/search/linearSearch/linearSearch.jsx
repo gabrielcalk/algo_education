@@ -1,5 +1,5 @@
 const linearSearch = (numbers, element) => {
-    const newArray = numbers.slice()
+    const newArray =  JSON.parse(JSON.stringify(numbers));
     // Loop the given array.
     for (let index = 0; index < newArray.length; index++) {
       newArray[index].checked = "checked"
