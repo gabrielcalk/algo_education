@@ -1,5 +1,7 @@
 const binarySearch = (numbers, element) => {
-  
+  // Doing a deep copy of the state to make the "array" lose any relationship with the state
+  // Shallow Copy stores the references of objects to the original memory address.
+  // Deep copy stores copies of the object’s value to other variable.
   const array = JSON.parse(JSON.stringify(numbers));
 
   const animation = [];
@@ -34,6 +36,17 @@ const binarySearch = (numbers, element) => {
       start = mid + 1;
       array[start].checked = "startAfter";
       animation.push(array[start]);
+    }
+
+    if (array[end].element === parseInt(element)) {
+      array[end].checked = "found";
+      animation.push(array[end]);
+      return animation;
+    }
+    if (array[start].element === parseInt(element)) {
+      array[start].checked = "found";
+      animation.push(array[start]);
+      return animation;
     }
   }
   return animation;
