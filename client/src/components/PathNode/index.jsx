@@ -1,8 +1,14 @@
-import { useDrag } from "react-dnd";
+import { useRef, useContext } from "react";
+import { useDrag, useDrop } from "react-dnd";
+
+import NodesContext from '../../page/Path/context';
 
 import "./style.css";
 
-function RenderNode({ nodeIdx, isStart, isFinish, col, row, nodeGrid }) {
+function RenderNode({ nodeIdx, isStart, isFinish, col, row, nodeGrid, positionDropNode}) {
+  const ref = useRef();
+  const {move} = useContext(NodesContext)
+
   const [{ isDragging }, drag] = useDrag(() => ({
     type: "nodeGrid",
     item: isStart ? nodeGrid.beginNode : nodeGrid.endNode,
@@ -10,6 +16,17 @@ function RenderNode({ nodeIdx, isStart, isFinish, col, row, nodeGrid }) {
       isDragging: !!monitor.isDragging(),
     }),
   }));
+
+  const [{isOver}, drop] = useDrop(() => ({
+    accept: "nodeGrid",
+    drop: (item) => {
+        move(col, row, item)
+    },
+    collect: (monitor) => ({
+      isOver: !!monitor.isOver(),
+    }),
+  }));
+
   // Adding the respective class on the node
   const extraClassName = isFinish
     ? "node-finish"
@@ -40,12 +57,14 @@ function RenderNode({ nodeIdx, isStart, isFinish, col, row, nodeGrid }) {
       }
     : null;
 
+    drag(drop(ref));
+
   return (
     <div
       key={nodeIdx}
       id={`node-${row}-${col}`}
       className={`node ${extraClassName}`}
-      ref={dragTest}
+      ref={ref}
       style={styleTest}
       // onMouseDown={() => onMouseDown(row, col)}
       // onMouseEnter={() => onMouseEnter(row, col)}

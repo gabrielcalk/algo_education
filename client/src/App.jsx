@@ -17,8 +17,8 @@ import { GlobalStyle } from "./styleGlobal/global";
 function App() {
   return (
     <>
-      <GlobalStyle />
       <DndProvider backend={HTML5Backend}>
+      <GlobalStyle />
         <BrowserRouter>
           <RenderNav />
           <Routes>
