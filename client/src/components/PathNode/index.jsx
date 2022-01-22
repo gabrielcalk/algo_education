@@ -1,13 +1,23 @@
-import { useRef, useContext } from "react";
+import { useContext } from "react";
 import { useDrag, useDrop } from "react-dnd";
 
-import NodesContext from '../../page/Path/context';
+import NodesContext from "../../page/Path/context";
 
 import "./style.css";
 
-function RenderNode({ nodeIdx, isStart, isFinish, col, row, nodeGrid, positionDropNode}) {
-  const ref = useRef();
-  const {move} = useContext(NodesContext)
+function RenderNode({
+  nodeIdx,
+  isStart,
+  isFinish,
+  col,
+  row,
+  nodeGrid,
+  isWall,
+  onMouseDown,
+  onMouseEnter,
+  onMouseUp,
+}) {
+  const { move } = useContext(NodesContext);
 
   const [{ isDragging }, drag] = useDrag(() => ({
     type: "nodeGrid",
@@ -17,10 +27,10 @@ function RenderNode({ nodeIdx, isStart, isFinish, col, row, nodeGrid, positionDr
     }),
   }));
 
-  const [{isOver}, drop] = useDrop(() => ({
+  const [{ isOver }, drop] = useDrop(() => ({
     accept: "nodeGrid",
     drop: (item) => {
-        move(col, row, item)
+      move(col, row, item);
     },
     collect: (monitor) => ({
       isOver: !!monitor.isOver(),
@@ -32,14 +42,9 @@ function RenderNode({ nodeIdx, isStart, isFinish, col, row, nodeGrid, positionDr
     ? "node-finish"
     : isStart
     ? "node-start"
-    : // : isWall
-      // ? "node-wall"
-      "";
-
-  /**
-   * Adding the Drag Test and the Style on the start and finish node
-   */
-  const dragTest = isFinish ? drag : isStart ? drag : null;
+    : isWall
+    ? "node-wall"
+    : "";
 
   const styleTest = isFinish
     ? {
@@ -48,27 +53,30 @@ function RenderNode({ nodeIdx, isStart, isFinish, col, row, nodeGrid, positionDr
         fontWeight: "bold",
         cursor: "move",
       }
-    : isStart
-    ? {
-        opacity: isDragging ? 0.5 : 1,
-        fontSize: 25,
-        fontWeight: "bold",
-        cursor: "move",
-      }
-    : null;
+    : // : isStart
+      // ? {
+      //     opacity: isDragging ? 0.5 : 1,
+      //     fontSize: 25,
+      //     fontWeight: "bold",
+      //     cursor: "move",
+      //   }
+      null;
 
-    drag(drop(ref));
+  /**
+   * Adding the Drag Test and the Style on the start and finish node
+   */
+  const dragTest = isFinish ? drag : isStart ? null : drop;
 
   return (
     <div
       key={nodeIdx}
       id={`node-${row}-${col}`}
       className={`node ${extraClassName}`}
-      ref={ref}
+      ref={dragTest}
       style={styleTest}
-      // onMouseDown={() => onMouseDown(row, col)}
-      // onMouseEnter={() => onMouseEnter(row, col)}
-      // onMouseUp={() => onMouseUp()}
+      onMouseDown={() => onMouseDown(row, col)}
+      onMouseEnter={() => onMouseEnter(row, col)}
+      onMouseUp={() => onMouseUp()}
     ></div>
   );
 }
