@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import produce from 'immer'
 import NodesContext from "./context";
 import RenderPathFindingVisualizer from "../../components/PathFindingVisualizer/index.jsx";
 
@@ -30,7 +29,6 @@ function RenderPathPage() {
     }
 
     setGrid(grid);
-    console.log(grid)
   }, []);
 
   const createNode = (col, row) => {
@@ -50,9 +48,22 @@ function RenderPathPage() {
     };
   };
 
-  function move(row, col, item){
-    setGrid(produce(grid, draft => {
-    }))
+  function move(col, row, item){
+    console.log(item)
+
+    let newGrid = [...grid]
+    let nodeStart = item.type === 'start' ? newGrid[item.START_NODE_ROW][item.START_NODE_COL] : newGrid[item.FINISH_NODE_ROW][item.FINISH_NODE_COL]
+
+    let nodeTo = newGrid[row][col]
+
+    newGrid[row][col] = nodeStart
+
+    if(item.type === 'start')
+      newGrid[item.START_NODE_ROW][item.START_NODE_COL] = nodeTo
+    else 
+      newGrid[item.FINISH_NODE_ROW][item.FINISH_NODE_COL] = nodeTo
+
+    setGrid(newGrid)
   }
 
   return (
