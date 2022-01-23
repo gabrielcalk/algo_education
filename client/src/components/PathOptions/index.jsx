@@ -23,22 +23,20 @@ function RenderPathOptions(){
     }
 
     function handleNewPositionStart(){
-        let newNodeGrid = {...nodeGrid}
+        const newNodeGrid = {...nodeGrid};
         let newGrid = [...grid]
         
         let nodeStart = newGrid[nodeGrid.beginNode.START_NODE_ROW][nodeGrid.beginNode.START_NODE_COL]
-
-        newNodeGrid.beginNode.START_NODE_ROW = startRow
-        newNodeGrid.beginNode.START_NODE_COL = startCol
-
         let nodeTo = newGrid[startRow][startCol]
-
+        
         newGrid[startRow][startCol] = nodeStart
         newGrid[nodeGrid.beginNode.START_NODE_ROW][nodeGrid.beginNode.START_NODE_COL] = nodeTo
-
+        
+        newNodeGrid.beginNode.START_NODE_ROW = startRow
+        newNodeGrid.beginNode.START_NODE_COL = startCol
+        
         setNodeGrid(newNodeGrid)
         setGrid(newGrid)
-        console.log(grid)
     }
 
     function handleNewPositionEnd(){
