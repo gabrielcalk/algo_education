@@ -47,35 +47,35 @@ function RenderPathPage() {
     };
   };
 
-  function move(col, row, item){
+  // function move(col, row, item){
 
-    let newGrid = [...grid]
-    let nodeStart = item.type === 'start' ? newGrid[item.START_NODE_ROW][item.START_NODE_COL] : newGrid[item.FINISH_NODE_ROW][item.FINISH_NODE_COL]
+  //   let newGrid = [...grid]
+  //   let nodeStart = item.type === 'start' ? newGrid[item.START_NODE_ROW][item.START_NODE_COL] : newGrid[item.FINISH_NODE_ROW][item.FINISH_NODE_COL]
 
-    let nodeTo = newGrid[row][col]
+  //   let nodeTo = newGrid[row][col]
 
-    newGrid[row][col] = nodeStart
+  //   newGrid[row][col] = nodeStart
 
-    if(item.type === 'start'){
-      newGrid[item.START_NODE_ROW][item.START_NODE_COL] = nodeTo
-      let newNodeGrid = {...nodeGrid}
-      newNodeGrid.beginNode.START_NODE_ROW = row
-      newNodeGrid.beginNode.START_NODE_COL = col
-      setNodeGrid(newNodeGrid)
-    } else{
-      newGrid[item.FINISH_NODE_ROW][item.FINISH_NODE_COL] = nodeTo
-      let newNodeGrid = {...nodeGrid}
-      newNodeGrid.endNode.FINISH_NODE_ROW = row
-      newNodeGrid.endNode.FINISH_NODE_COL = col
-      setNodeGrid(newNodeGrid)
-    } 
+  //   if(item.type === 'start'){
+  //     newGrid[item.START_NODE_ROW][item.START_NODE_COL] = nodeTo
+  //     let newNodeGrid = {...nodeGrid}
+  //     newNodeGrid.beginNode.START_NODE_ROW = row
+  //     newNodeGrid.beginNode.START_NODE_COL = col
+  //     setNodeGrid(newNodeGrid)
+  //   } else{
+  //     newGrid[item.FINISH_NODE_ROW][item.FINISH_NODE_COL] = nodeTo
+  //     let newNodeGrid = {...nodeGrid}
+  //     newNodeGrid.endNode.FINISH_NODE_ROW = row
+  //     newNodeGrid.endNode.FINISH_NODE_COL = col
+  //     setNodeGrid(newNodeGrid)
+  //   } 
 
-    setGrid(newGrid)
-  }
+  //   setGrid(newGrid)
+  // }
 
   return (
     <div>
-    <NodesContext.Provider value={{grid, move, nodeGrid, setGrid}}>
+    <NodesContext.Provider value={{grid, nodeGrid, setNodeGrid, setGrid}}>
         <RenderPathFindingVisualizer/>
     </NodesContext.Provider>
     </div>
