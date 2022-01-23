@@ -1,6 +1,7 @@
 import {useState, useContext} from 'react'
 
 import NodesContext from '../../page/Path/context';
+import { Container } from './style';
 
 function RenderPathOptions(){
     const {nodeGrid, setNodeGrid, grid, setGrid} = useContext(NodesContext)
@@ -47,7 +48,7 @@ function RenderPathOptions(){
     }
 
     return(
-        <section>
+        <Container>
             <div>
                 <h4>Start Node</h4>
                 <input type="number" value={startRow} placeholder="Enter new row" name="startRow" onChange={(event) => handleNodeChangePosition(event.target.name)}/>
@@ -60,7 +61,7 @@ function RenderPathOptions(){
                 <input type="number" value={endCol} placeholder="Enter new column" name="endCol" onChange={(event) => handleNodeChangePosition(event.target.name)}/>
                 <button onClick={handleNewPositionEnd}>Change Position</button>
             </div>
-        </section>
+        </Container>
     )
 }
 
