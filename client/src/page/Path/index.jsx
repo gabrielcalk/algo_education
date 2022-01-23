@@ -30,7 +30,6 @@ function RenderPathPage() {
     }
 
     setGrid(grid);
-    console.log(grid)
   }, []);
 
   const createNode = (col, row) => {
@@ -52,6 +51,7 @@ function RenderPathPage() {
 
   function move(row, col, item){
     setGrid(produce(grid, draft => {
+        draft[item.START_NODE_ROW][item.START_NODE_COL].slice(1, 0)
     }))
   }
 

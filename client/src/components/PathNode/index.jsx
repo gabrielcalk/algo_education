@@ -1,13 +1,21 @@
 import { useRef, useContext } from "react";
 import { useDrag, useDrop } from "react-dnd";
 
-import NodesContext from '../../page/Path/context';
+import NodesContext from "../../page/Path/context";
 
 import "./style.css";
 
-function RenderNode({ nodeIdx, isStart, isFinish, col, row, nodeGrid, positionDropNode}) {
+function RenderNode({
+  nodeIdx,
+  isStart,
+  isFinish,
+  col,
+  row,
+  nodeGrid,
+  positionDropNode,
+}) {
   const ref = useRef();
-  const {move} = useContext(NodesContext)
+  const { move } = useContext(NodesContext);
 
   const [{ isDragging }, drag] = useDrag(() => ({
     type: "nodeGrid",
@@ -17,10 +25,10 @@ function RenderNode({ nodeIdx, isStart, isFinish, col, row, nodeGrid, positionDr
     }),
   }));
 
-  const [{isOver}, drop] = useDrop(() => ({
+  const [{ isOver }, drop] = useDrop(() => ({
     accept: "nodeGrid",
     drop: (item) => {
-        move(col, row, item)
+      move(col, row, item);
     },
     collect: (monitor) => ({
       isOver: !!monitor.isOver(),
@@ -39,7 +47,6 @@ function RenderNode({ nodeIdx, isStart, isFinish, col, row, nodeGrid, positionDr
   /**
    * Adding the Drag Test and the Style on the start and finish node
    */
-  const dragTest = isFinish ? drag : isStart ? drag : null;
 
   const styleTest = isFinish
     ? {
@@ -57,7 +64,7 @@ function RenderNode({ nodeIdx, isStart, isFinish, col, row, nodeGrid, positionDr
       }
     : null;
 
-    drag(drop(ref));
+  drag(drop(ref));
 
   return (
     <div
