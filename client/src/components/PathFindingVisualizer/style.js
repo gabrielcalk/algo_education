@@ -8,5 +8,9 @@ export const Container = styled.main`
     gap: 1px;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap
+    flex-wrap: wrap;
+
+    @media (max-width:736px){
+        flex-wrap: nowrap;
+    }
 `

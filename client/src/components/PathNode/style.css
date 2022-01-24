@@ -1,9 +1,10 @@
 .node {
   width: 1.4rem;
   height: 1.4rem;
-  margin: 0px 1px -4px 1px; 
-  outline: 1px solid rgb(211, 211, 211);
+  margin: 1px 2px -3px 2px;
+  border: 1px solid rgb(170, 170, 170);
   display: inline-block;
+  border-radius: 5rem
 }
 
 .node-finish {
@@ -76,5 +77,21 @@
   100% {
     transform: scale(1);
     background-color: rgb(83, 81, 228);
+  }
+}
+
+@media only screen and (max-width: 1350px) {
+  .node {
+    width: 1.1rem;
+    height: 1.1rem;
+  }
+}
+
+
+@media only screen and (max-width: 1050px) {
+  .node {
+    width: 0.8rem;
+    height: 0.8rem;
+    margin: -1px;
   }
 }

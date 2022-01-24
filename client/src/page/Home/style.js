@@ -24,6 +24,16 @@ export const Container = styled.main`
             width: 28rem;
             height: 24rem;
             border-radius: 0.5rem;
+
+            @media(max-width: 450px){
+                width: 25rem;
+                height: 22rem;
+            }
+
+            @media(max-width: 370px){
+                width: 23rem;
+                height: 20rem;
+            }
         }
 
         div{
