@@ -1,14 +1,24 @@
 import styled from 'styled-components'
 
 export const Container = styled.section`
-    display: flex;
-    justify-content: center;
-    padding-top: 15px;
+    margin: 0 auto;
+    padding: 3rem 1rem 0 1rem;
     height: 500px;
     margin-top: 30px;
+    width: 60%;
+
+    h3, p{
+       text-align: center;
+    }
+
+    p{
+        margin-top: 2rem;
+        font-size: 1.3rem;
+    }
 
     div{
-        margin: 0 auto;
+        display: flex;
+        justify-content: center;
     }
 
     /* Adding some color, margin, padding and background animation on the anchors that are inside to the nav tag */

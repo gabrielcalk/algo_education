@@ -9,7 +9,6 @@ import {
 } from "../../utils/algorithm/path/dijkstra/dijkstraPath";
 import { animateDijkstra } from "../../utils/algorithm/path/dijkstra/animationDijkstra";
 import NodesContext from '../../page/Path/context';
-import RenderPathOptions from "../../components/PathOptions";
 
 function RenderPathFindingVisualizer() {
   const {nodeGrid, grid, setGrid} = useContext(NodesContext)
@@ -49,8 +48,6 @@ function RenderPathFindingVisualizer() {
       ];
     const finishNode =
       grid[nodeGrid.endNode.FINISH_NODE_ROW][nodeGrid.endNode.FINISH_NODE_COL];
-      console.log(startNode)
-      console.log(finishNode)
     const visitedNodesInOrder = dijkstra(grid, startNode, finishNode);
     const nodesInShortestPathOrder = getNodesInShortestPathOrder(finishNode);
     animateDijkstra(visitedNodesInOrder, nodesInShortestPathOrder);
@@ -59,7 +56,6 @@ function RenderPathFindingVisualizer() {
   return (
     <>
       <RenderNavBarPath visualizeDijkstra={visualizeDijkstra} />
-      <RenderPathOptions/>
       <Container>
         {grid.map((row, rowIdx) => (
           <div key={rowIdx}>

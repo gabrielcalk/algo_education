@@ -11,15 +11,21 @@ export const Bars = styled.div `
 `
 
 export const SectionBars = styled.section `
-    margin-top: 150px;
+    margin-top: 200px;
     display: flex;
     justify-content: center;
     align-items: flex-end;
 `
 
 export const SectionRange = styled.section`
-    margin-top: 20px;
+    margin-top: 3rem;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+
+    div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 `

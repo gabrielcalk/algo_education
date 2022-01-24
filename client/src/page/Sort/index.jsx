@@ -23,22 +23,31 @@ import { Container } from './style';
 function RenderSortPage(props) {
 
     const [heightArrays, setHeightArrays] = useState([]);
-    const [speed] = useState(10);
+    const [speed, setSpeed] = useState(10);
 
     // handling the bubble sort algorithm
     function handleBubbleSort() {
+        let speedAndSizeSlide = document.getElementsByClassName('slide')
+        speedAndSizeSlide[0].style.display = "none"
+        speedAndSizeSlide[1].style.display = "none"
         const animationsBubble = bubbleSort(heightArrays);
         animationBubble(animationsBubble, speed);
     }
 
     // handling the merge sort algorithm
     async function handleMergeSort() {
+        let speedAndSizeSlide = document.getElementsByClassName('slide')
+        speedAndSizeSlide[0].style.display = "none"
+        speedAndSizeSlide[1].style.display = "none"
         const animations = await mergeSort(heightArrays);
         animationMerge(animations, speed);
     }
 
     // handling the Insertion sort algorithm
     function handleInsertionSort() {
+        let speedAndSizeSlide = document.getElementsByClassName('slide')
+        speedAndSizeSlide[0].style.display = "none"
+        speedAndSizeSlide[1].style.display = "none"
         const animations = insertionSort(heightArrays);
         animationSelection(animations, speed)
     }
@@ -53,6 +62,8 @@ function RenderSortPage(props) {
             <RenderArray 
                 heightArrays={heightArrays} 
                 setHeightArrays={setHeightArrays}
+                speed={speed}
+                setSpeed={setSpeed}
             />
             
             {/* Info (sorting) section */}
