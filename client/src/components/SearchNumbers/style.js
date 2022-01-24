@@ -2,11 +2,16 @@ import styled from 'styled-components'
 
 export const Container = styled.section`
     padding: 0px 12rem;
-    margin: 7rem 0px;
+    margin: 5rem 0px;
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 14px;
     flex-wrap: wrap;
+
+    @media (max-width:860px){
+        padding: 0px 2rem;
+        margin: 4rem 0px;
+    }
 
     section{
         width: 3rem;

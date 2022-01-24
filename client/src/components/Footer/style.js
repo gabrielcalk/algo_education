@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 export const Footer = styled.footer`
-
     width: 100%;
     background-color: var(--third_color);
     color: var(--first_color);
@@ -12,26 +11,25 @@ export const Footer = styled.footer`
     .sectionAboutAndLinks{
         display: flex;
         justify-content: center;
-        justify-content: space-evenly;
         flex-wrap: wrap;
     }
 
     .divAbout{
         width: 45%;
-    }
 
-    .divLinks{
-        display: flex;
-        flex-direction: column;
-
-        ul li{
-            list-style: none;
-            text-decoration: none;
+        @media (max-width: 600px){
+            width: 70%;
         }
     }
 
     .sectionLinks{
         display: flex;
         justify-content: center;
+        gap: 2rem;
+        a{
+            svg{
+                color: var(--first_color);
+            }
+        }
     }
 `

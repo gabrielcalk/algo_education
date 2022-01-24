@@ -14,26 +14,38 @@ export const Container = styled.section`
     div{
         width: 100%;
         display: flex;
+        justify-content: center;
+
+        @media (max-width: 900px){
+            flex-wrap: wrap;
+            padding: 0 1rem;
+        }
+
         div{
             flex-direction: column;
             align-items: center;
-            margin: 0 auto;
+            margin: 1rem auto;
 
             pre{
                 color: var(--first_color);
+                margin-left: -20px;
+
+                @media (max-width: 450px){
+                    margin-left: -60px;
+                }
             }
         }
     }
 
     section{
-        margin: 5rem 0;
-        background-color: var(--second_color);
+        margin: 2rem 0;
+        background-color: var(--first_color);
         padding-top: 6rem;
         
         h3{
             text-align: center;
-            color: var(--first_color);
-            margin-bottom: 3rem
+            color: black;
+            margin-bottom: 2rem
         }
         div{
             display: flex;

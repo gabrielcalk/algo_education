@@ -19,7 +19,7 @@ function RenderNumbers(props) {
   // Rendering Numbers
   useEffect(() => {
     let array = [];
-    for (let i = 0; i < 70; i++) {
+    for (let i = 0; i < 80; i++) {
       let element = Math.floor(Math.random() * 200);
 
       let numberData = {

@@ -61,7 +61,7 @@ function RenderHomePage() {
                     <img src={gabrielImg} alt="author"/>
                 </div>
                 <div>
-                    <h2>About the Author</h2>
+                    <h2 className="about_author">About the Author</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, porro ad fugiat doloribus minus sapiente et eos in vitae praesentium, pariatur facere. Qui harum ratione expedita cum et quod sint?</p>
                 </div>
             </section>
