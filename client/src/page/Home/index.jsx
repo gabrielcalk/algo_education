@@ -49,7 +49,7 @@ function RenderHomePage() {
             <section ref={targetRef2}>
                 <div>
                     <h2>About the Project</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro optio, nulla a vero mollitia laudantium libero obcaecati fugit rerum odit sapiente suscipit dicta voluptas aut expedita. Optio eius quibusdam tenetur?</p>
+                    <p>Algo Education is an educational program that allows developers to learn visually and with simple and clear explanations some of the algorithms that exist in the programming world.</p>
                 </div>
                 <div>
                     <img src={pcCodeImg} alt="code"/>

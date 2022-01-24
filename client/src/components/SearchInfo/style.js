@@ -1,15 +1,15 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-    padding-bottom: 220px;
     margin-top: 3rem;
     display: flex;
     justify-content: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
 `
 
 export const TitleLegend = styled.h2`
     text-align: center;
+    margin-bottom: 5rem;
 `
 
 export const DivLegend = styled.div`

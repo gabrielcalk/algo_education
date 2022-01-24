@@ -13,7 +13,7 @@ function RenderNavSearch({
         <button onClick={() => handleBinaryAlgorithm()}>Binary Search</button>
       </div>
       <div>
-        <span>Pick a Number</span>
+        <span>Number (0 - 200)</span>
         <input
           placeholder="Number"
           value={inputNumber}

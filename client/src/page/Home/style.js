@@ -9,7 +9,7 @@ export const Container = styled.main`
         display: flex;
         align-items: center;
         flex-wrap: wrap;
-        margin-top: 6rem;
+        margin-top: 8rem;
         
         &:last-child{
             margin-bottom: 8rem;

@@ -6,7 +6,7 @@ export const Container = styled.div`
         justify-content: center;
         align-items: center;
         justify-content: space-evenly;
-        margin: 1rem 0;
+        margin: 3rem 0;
     
         &:last-child{
             flex-direction: column;
@@ -30,6 +30,7 @@ export const Container = styled.div`
         background-color: var(--third_color);
         color: var(--first_color);
         transform: translateZ(0);
+        }
     }
 
     /* Adding an animation on the anchors that are inside to the nav tag */
@@ -51,7 +52,6 @@ export const Container = styled.div`
     button:hover:before {
         transform: scaleY(1);
         transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
-    }
     }
 
 
