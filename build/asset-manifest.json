@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/static/css/main.93e5c2e1.chunk.css",
+    "main.js": "/static/js/main.501197aa.chunk.js",
+    "main.js.map": "/static/js/main.501197aa.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.776c1e0d.js",
+    "runtime-main.js.map": "/static/js/runtime-main.776c1e0d.js.map",
+    "static/css/2.8c0e6b67.chunk.css": "/static/css/2.8c0e6b67.chunk.css",
+    "static/js/2.f7b5a097.chunk.js": "/static/js/2.f7b5a097.chunk.js",
+    "static/js/2.f7b5a097.chunk.js.map": "/static/js/2.f7b5a097.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.8c0e6b67.chunk.css.map": "/static/css/2.8c0e6b67.chunk.css.map",
+    "static/css/main.93e5c2e1.chunk.css.map": "/static/css/main.93e5c2e1.chunk.css.map",
+    "static/js/2.f7b5a097.chunk.js.LICENSE.txt": "/static/js/2.f7b5a097.chunk.js.LICENSE.txt",
+    "static/media/algo_logo.db0c617f.png": "/static/media/algo_logo.db0c617f.png",
+    "static/media/brazil_flag.6ee21a89.svg": "/static/media/brazil_flag.6ee21a89.svg",
+    "static/media/gabriel_image.92334d99.jpg": "/static/media/gabriel_image.92334d99.jpg",
+    "static/media/github.5c9c4d17.svg": "/static/media/github.5c9c4d17.svg",
+    "static/media/linkedin.5d19352c.svg": "/static/media/linkedin.5d19352c.svg",
+    "static/media/mergeSortBreak.db68002d.png": "/static/media/mergeSortBreak.db68002d.png",
+    "static/media/mergeSortMerging.c1a4affa.png": "/static/media/mergeSortMerging.c1a4affa.png",
+    "static/media/pc.a81db09f.jpg": "/static/media/pc.a81db09f.jpg",
+    "static/media/pc_code.16f78f70.jpg": "/static/media/pc_code.16f78f70.jpg",
+    "static/media/usa_flag.66869bfa.svg": "/static/media/usa_flag.66869bfa.svg",
+    "static/media/womam_pc.a2cd7c68.jpg": "/static/media/womam_pc.a2cd7c68.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.776c1e0d.js",
+    "static/css/2.8c0e6b67.chunk.css",
+    "static/js/2.f7b5a097.chunk.js",
+    "static/css/main.93e5c2e1.chunk.css",
+    "static/js/main.501197aa.chunk.js"
+  ]
+}
