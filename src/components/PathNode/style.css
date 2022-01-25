@@ -1,18 +1,27 @@
 .node {
-  width: 1.4rem;
-  height: 1.4rem;
-  margin: 1px 2px -3px 2px;
-  border: 1px solid rgb(170, 170, 170);
+  width: 1.6rem;
+  height: 1.6rem;
+  margin: 0px 3px -4px 1px;
+  border: 1px solid rgb(185, 185, 185);
   display: inline-block;
-  border-radius: 5rem
+}
+
+.node-finish::after {
+  content: "🏁";
+  position: absolute;
 }
 
 .node-finish {
-  background-color: red;
+  border-width: 0px;
 }
 
-.node-start {
-  background-color: green;
+.node-start::after {
+  content: "🚗";
+  position: absolute;
+}
+
+.node-start{
+  border-width: 0px;
 }
 
 .node-visited {
@@ -29,27 +38,32 @@
 @keyframes visitedAnimation {
   0% {
     transform: scale(0.3);
-    background-color: rgba(177, 2, 75, 0.75);
+    background-color: rgba(172, 93, 19, 0.75);
     border-radius: 100%;
   }
 
   50% {
-    background-color: rgba(221, 21, 104, 0.75);
+    background-color: rgba(155, 92, 32, 0.75);
   }
 
   75% {
     transform: scale(1.2);
-    background-color: rgba(214, 60, 124, 0.75);
+    background-color: rgba(160, 91, 27, 0.75);
   }
 
   100% {
     transform: scale(1);
-    background-color: rgba(248, 124, 176, 0.75);
+    background-color: rgba(185, 102, 24, 0.75);
   }
 }
 
-.node-wall {
-  background-color: var(--third_color);
+.node-wall::after {
+  content: "🧱";
+  position: absolute;
+}
+
+.node-wall{
+  border-width: 0px;
 }
 
 .node-shortest-path {
@@ -61,22 +75,31 @@
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   animation-play-state: running;
+  border-width: 0px;
+}
+
+.node-shortest-path::after{
+  content: "🚗";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
 
 @keyframes shortestPath {
   0% {
     transform: scale(0.6);
-    background-color: rgb(106, 116, 255);
+    border-width: 0px;
   }
 
   50% {
     transform: scale(1.2);
-    background-color: rgb(94, 88, 184);
+    border-width: 0px;
   }
 
   100% {
     transform: scale(1);
-    background-color: rgb(83, 81, 228);
+    border-width: 0px;
   }
 }
 

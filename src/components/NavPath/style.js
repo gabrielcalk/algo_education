@@ -2,11 +2,17 @@ import styled from 'styled-components'
 
 export const StyleNav = styled.nav`
 /* Adding a display flex, flex wrap, defining the nav to a row and some margin on the right */
-        display:flex;
-        flex-wrap:wrap;
-        flex-direction: row;
-        justify-content: center;
-        padding: 5px;
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction: row;
+    justify-content: center;
+    padding: 5px;
+    justify-content: space-around;
+
+    div{
+        display: flex;
+        flex-direction: row
+    }
 
     /* Adding some color, margin, padding and background animation on the anchors that are inside to the nav tag */
     button {
