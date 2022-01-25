@@ -4,6 +4,7 @@ import NodesContext from "./context";
 import RenderPathFindingVisualizer from "../../components/PathFindingVisualizer/index.jsx";
 import RenderPathInfo from '../../components/PathInfo/index'
 import RenderPathCredits from "../../components/PathCredits/index"
+import RenderVideoPath from '../../components/PathVideo/index'
 
 function RenderPathPage() {
   const [grid, setGrid] = useState([]);
@@ -80,6 +81,7 @@ function RenderPathPage() {
     <div>
     <NodesContext.Provider value={{grid, nodeGrid, setNodeGrid, setGrid}}>
         <RenderPathFindingVisualizer />
+        <RenderVideoPath/>
         <RenderPathInfo />
         <RenderPathCredits />
     </NodesContext.Provider>
