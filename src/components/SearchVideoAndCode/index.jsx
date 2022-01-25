@@ -39,12 +39,12 @@ function RenderVideoAndCode() {
         </div>
       </div>
       <section>
-        <h3>Explanation About Sort Algorithm</h3>
+        <h3><a href="https://www.youtube.com/embed/o3T-FG9lomM">Explanation About Sort Algorithm</a></h3>
         <div>
           <iframe
-            width="680"
-            height="400"
-            src="https://www.youtube-nocookie.com/embed/QpANyJ13fos"
+            width="560"
+            height="310"
+            src="https://www.youtube.com/embed/o3T-FG9lomM"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
