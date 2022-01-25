@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
+
 import NodesContext from "./context";
 import RenderPathFindingVisualizer from "../../components/PathFindingVisualizer/index.jsx";
+import RenderPathInfo from '../../components/PathInfo/index'
 
 function RenderPathPage() {
   const [grid, setGrid] = useState([]);
@@ -77,6 +79,7 @@ function RenderPathPage() {
     <div>
     <NodesContext.Provider value={{grid, nodeGrid, setNodeGrid, setGrid}}>
         <RenderPathFindingVisualizer/>
+        <RenderPathInfo />
     </NodesContext.Provider>
     </div>
   );
