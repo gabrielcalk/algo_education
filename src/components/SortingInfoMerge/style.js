@@ -39,7 +39,7 @@ export const Text = styled.article`
     }
     
     img{
-        width: 40%;
+        width: 30%;
         margin: 35px 0;
         border: 1px solid var(--forth_color);
         border-radius: 5px;
@@ -52,7 +52,13 @@ export const DivFlag = styled.div`
     cursor: pointer;
 
     svg{
-        margin: 30px 3px -7px 3px;
+        margin: 30px 1.5rem 0px 1.5rem;
+        opacity: 0.9;
+        transition: opacity 0.2s
+    }
+
+    svg:hover{
+        opacity: 1
     }
 `
 

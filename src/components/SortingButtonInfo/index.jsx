@@ -3,9 +3,9 @@ import {DivButton} from './style.js'
 function DisplayButtonsInfo({setShowInfo}) {
     return (
         <DivButton>
-                <button onClick={() => {setShowInfo("bubble")}}>BubbleSort</button>
-                <button onClick={() => {setShowInfo("merge")}}>MergeSort</button>
-                <button onClick={() => {setShowInfo("insertion")}}>InsertionSort</button>
+                <button onClick={() => {setShowInfo("bubble")}}>Bubble Sort</button>
+                <button onClick={() => {setShowInfo("merge")}}>Merge Sort</button>
+                <button onClick={() => {setShowInfo("insertion")}}>Selection Sort</button>
         </DivButton>
     );
 }

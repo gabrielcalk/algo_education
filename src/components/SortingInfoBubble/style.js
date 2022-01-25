@@ -44,7 +44,13 @@ export const DivFlag = styled.div`
     cursor: pointer;
 
     svg{
-        margin: 20px 3px -7px 3px;
+        margin: 30px 1.5rem 0px 1.5rem;
+        opacity: 0.9;
+        transition: opacity 0.2s
+    }
+
+    svg:hover{
+        opacity: 1
     }
 `
 

@@ -29,6 +29,12 @@ export const Footer = styled.footer`
         a{
             svg{
                 color: var(--first_color);
+                opacity: 0.9;
+                transition: opacity 0.2s
+            }
+
+            svg:hover{
+                opacity: 0.6;
             }
         }
     }

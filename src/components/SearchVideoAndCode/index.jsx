@@ -6,6 +6,8 @@ function RenderVideoAndCode() {
       <div>
         <div>
           <h3>Linear Search Code</h3>
+          <p>Time Complexity: O(n)</p>
+          <p>Space Complexity: O(i)</p>
           <pre>
             {`
         function linearSearch(array, targetNumber){
@@ -18,6 +20,8 @@ function RenderVideoAndCode() {
         </div>
         <div>
           <h3>Binary Search Code</h3>
+          <p>Time Complexity: O(log(n))</p>
+          <p>Space Complexity: O(i)</p>
           <pre>
             {`
         function binarySearch(array, targetNumber) {

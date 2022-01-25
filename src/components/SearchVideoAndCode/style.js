@@ -11,6 +11,11 @@ export const Container = styled.section`
         color: var(--forth_color);
     }
 
+    p{
+        text-align: center;
+        color: var(--first_color);
+    }
+
     div{
         width: 100%;
         display: flex;
