@@ -38,27 +38,27 @@
 @keyframes visitedAnimation {
   0% {
     transform: scale(0.3);
-    background-color: rgba(172, 93, 19, 0.75);
+    background-color: rgba(243, 73, 243, 0.75);
     border-radius: 100%;
   }
 
   50% {
-    background-color: rgba(155, 92, 32, 0.75);
+    background-color: rgba(243, 121, 243, 0.75);
   }
 
   75% {
     transform: scale(1.2);
-    background-color: rgba(160, 91, 27, 0.75);
+    background-color: rgba(243, 171, 243, 0.75);
   }
 
   100% {
     transform: scale(1);
-    background-color: rgba(185, 102, 24, 0.75);
+    background-color: rgba(243, 221, 243, 0.75);
   }
 }
 
 .node-wall::after {
-  content: "🧱";
+  content: "🚫";
   position: absolute;
 }
 
