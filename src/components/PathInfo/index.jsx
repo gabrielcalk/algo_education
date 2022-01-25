@@ -6,47 +6,6 @@ function RenderPathInfo(props) {
   return (
     <Container>
       <div>
-        <p>the number of length is equal to the number of nodes</p>
-        <p>All the path received infinity distance</p>
-        <p>Setting the distance to the start node to 0</p>
-        <p>
-          Set === array with not repeated values and will store all the visited
-          nodes
-        </p>
-        <p>while we did not visited all the number of vertices</p>
-        <p>
-          function that return the vertex and the current min distance to get to
-          that vertex
-        </p>
-        <p>
-          breaking if we don't have a current min distance (it is equal to
-          inifity)
-        </p>
-        <p>looping through on all of the edged for the current vertex</p>
-        <p>
-          each edge is a pair on this case (diffenrent then what I have on the
-          visualization above)
-        </p>
-
-        <p>
-          if we already seen the destination vertex, we don't need to look again
-        </p>
-        <p>updating if the edge will lead us to a shorter path</p>
-        <p>
-          we will use this variable to keep track on the current minimum
-          distance that we find.
-        </p>
-        <p>
-          we will use this variable to keep track the node/vertex that has the
-          minimun distance
-        </p>
-        <p>continue we already visited that vertex</p>
-        <p>
-          checking on each vertex if the condition is true and then updating the
-          vertex and the minimun distance
-        </p>
-      </div>
-      <div>
       <h3>Dijkstra's Code (JS)</h3>
         <pre>
           {`

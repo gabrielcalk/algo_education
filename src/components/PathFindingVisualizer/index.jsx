@@ -97,6 +97,7 @@ function RenderPathFindingVisualizer() {
         generateMaze={generateMaze}
       />
       <Container>
+        <h4>Please, use a desktop to see the grid</h4>
         {grid.map((row, rowIdx) => (
           <div key={rowIdx}>
             {row.map((node, nodeIdx) => {

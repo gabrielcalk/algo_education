@@ -9,7 +9,16 @@ export const Container = styled.main`
     justify-content: center;
     flex-wrap: wrap;
 
-    @media (max-width:736px){
-        flex-wrap: nowrap;
+    h4{
+        display: none;
+    }
+
+    @media (max-width:915px){
+        h4{
+            display: block;
+            background: var(--second_color);
+            color: var(--first_color);
+            padding: 1rem
+        }
     }
 `

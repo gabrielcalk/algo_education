@@ -22,7 +22,7 @@ function RenderNavBarPath({
               visualizeAAstar();
             }}
           >
-            A* Astar (soon)
+            A*Search (soon)
           </button>
         </div>
         <div>
