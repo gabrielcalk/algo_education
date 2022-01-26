@@ -65,13 +65,23 @@ function RenderHomePage() {
         <div>
           <h2 className="about_author">About the Author</h2>
           <p>
-            I'm a front-end developer with experience in: HTML, CSS, JavaScript,
-            Node.JS, MYSQL, MongoDB, GraphQL, React, Next.js and Azure. I
-            co-founded my first company when I was 18 years. During my
-            participation as a co-founder, I worked as a head of marketing,
-            financial manager, and managing a team of 5 people where we
-            delivered: sales funnels, launches, landing pages, and platforms
-            with investment content and achieved more than $250k in revenue.
+            Achiever, relator, analytical, and highly focused on achieving
+            extraordinary results through communications and hard work.
+          </p>
+          
+          <p>
+            At age 18, he co-founded a company where he worked in team
+            management and found deep satisfaction in working with friends to
+            achieve goals. During his participation as a manager, he generated
+            with his team more than US$ 250,000 in revenue through digital
+            launches, sales funnels, sales pages, and sales campaigns.
+          </p>
+
+          <p>
+            Currently pursuing a software engineering career and focusing on
+            Next.js, Machine learning, and security market certifications.
+            Gabriel can stay focused on the project, take direction, move
+            forward, and make the necessary corrections to stay on track.
           </p>
         </div>
       </section>
