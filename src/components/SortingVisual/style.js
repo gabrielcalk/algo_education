@@ -8,6 +8,10 @@ export const Bars = styled.div `
         width: 10px;
         font-size: 5px;
     }
+
+    @media (max-width: 915px){
+        display: none;
+    }
 `
 
 export const SectionBars = styled.section `
@@ -27,5 +31,28 @@ export const SectionRange = styled.section`
         display: flex;
         flex-direction: column;
         align-items: center;
+        @media (max-width:915px){
+            .slide, h5{
+                display: none;
+            }
+        }
+    }
+
+`
+
+export const Container = styled.main`
+    h4{
+        display: none;
+    }  
+
+    @media (max-width:915px){
+        h4{
+            display: flex;
+            background: var(--second_color);
+            color: var(--first_color);
+            padding: 1rem;
+            justify-content: center;
+            margin: 3rem 1rem -8rem 1rem;
+        }
     }
 `

@@ -7,6 +7,10 @@ export const Container = styled.section`
     margin-top: 30px;
     width: 60%;
 
+    @media (max-width: 600px){
+        width: 85%;
+    }
+
     h3, p{
        text-align: center;
     }

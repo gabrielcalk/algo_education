@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 // importing MUI library to create the slider
 import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
-import { Bars, SectionBars, SectionRange } from "./style.js";
+import { Bars, SectionBars, SectionRange, Container } from "./style.js";
 
 function RenderArray({ heightArrays, setHeightArrays, speed, setSpeed }) {
   const [sizeArray, setSizeArray] = useState(80);
@@ -34,11 +34,12 @@ function RenderArray({ heightArrays, setHeightArrays, speed, setSpeed }) {
   };
 
   return (
-    <main>
+    <Container>
       {/* Generating the option to choose the size of the array */}
+      <h4>Please, use a desktop to see the bars</h4>
       <SectionRange>
         <div>
-          <h4>Change the size of the bars</h4>
+          <h5>Change the size of the bars</h5>
           <Box width={100}>
             <Slider
               className="slide"
@@ -52,7 +53,7 @@ function RenderArray({ heightArrays, setHeightArrays, speed, setSpeed }) {
           </Box>
         </div>
         <div>
-          <h4>Change the delay</h4>
+          <h5>Change the delay</h5>
           <Box width={100}>
             <Slider
               className="slide"
@@ -82,7 +83,7 @@ function RenderArray({ heightArrays, setHeightArrays, speed, setSpeed }) {
             );
           })}
       </SectionBars>
-    </main>
+    </Container>
   );
 }
 

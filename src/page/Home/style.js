@@ -9,8 +9,8 @@ export const Container = styled.main`
 
     section{
         opacity: 0;
-        transform: translateX(100px);
-        transition: 2200ms;
+        transform: translateX(30px);
+        transition: 1500ms;
         display: flex;
         align-items: center;
         flex-wrap: wrap;
