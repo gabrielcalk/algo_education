@@ -68,20 +68,18 @@ function RenderHomePage() {
             Achiever, relator, analytical, and highly focused on achieving
             extraordinary results through communications and hard work.
           </p>
-          
+
           <p>
-            At age 18, he co-founded a company where he worked in team
-            management and found deep satisfaction in working with friends to
-            achieve goals. During his participation as a manager, he generated
-            with his team more than US$ 250,000 in revenue through digital
-            launches, sales funnels, sales pages, and sales campaigns.
+            At age 18, he co-founded a company where he worked as a manager and
+            full-stack developer, including from the creation and development of
+            dozens of pages and website to the maintenance of their servers.
           </p>
 
           <p>
-            Currently pursuing a software engineering career and focusing on
-            Next.js, Machine learning, and security market certifications.
-            Gabriel can stay focused on the project, take direction, move
-            forward, and make the necessary corrections to stay on track.
+            Currently work at a company that operates in the financial market
+            using the following technologies: Node.js, Javascript, Typescript,
+            .Net, C#, Mobx, Axios, Single-spa (microfrontend), Jest (Unit and
+            integration testing), SQL, CSS, PostCSS, HTML, Azure.
           </p>
         </div>
       </section>
