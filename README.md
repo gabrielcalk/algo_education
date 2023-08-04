@@ -1,5 +1,5 @@
 # Algo Education
-[https://algo-education.herokuapp.com/](https://algo-education-app-52fa4f47f957.herokuapp.com/)
+[https://algo-education-app-52fa4f47f957.herokuapp.com/](https://algo-education-app-52fa4f47f957.herokuapp.com/)
 
 ## *Table of Contents*
 - [Description](#description)
